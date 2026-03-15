@@ -1,0 +1,13 @@
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-185413-a1f9d3aa\course_config.xlsx' …
+[WARNING] Course 'Deep Learning' has invalid/missing group '' in sheet 'Sheet1'; expected G1 or G2 — skipped.
+[WARNING] Course 'Digital Image Processing' has invalid/missing group '' in sheet 'Sheet1'; expected G1 or G2 — skipped.
+[WARNING] Course 'Machine Learning' has invalid/missing group '' in sheet 'Sheet1'; expected G1 or G2 — skipped.
+[WARNING] Course 'Advanced Java Programming' has invalid/missing group '' in sheet 'Sheet1'; expected G1 or G2 — skipped.
+[WARNING] Course 'Advanced Data Structure' has invalid/missing group '' in sheet 'Sheet1'; expected G1 or G2 — skipped.
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:54:13] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:54:13] "GET / HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:54:14] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO]  * Detected change in 'C:\\Users\\thish\\OneDrive\\Documents\\GitHub\\course_allocation\\web_app.py', reloading

@@ -1,0 +1,1214 @@
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\course_config.xlsx' …
+[INFO] Loaded 8 course(s) from config.
+[INFO] Step 2/7  Loading student responses from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\ex1.xlsx' …
+[INFO] Loaded 100 response row(s) from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\ex1.xlsx'.
+[INFO] Step 3/7  Cleaning data (dedup, CGPA normalisation) …
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] Processed 100 unique student(s).
+[INFO] Step 4/7  Validating course preferences …
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04101 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04101 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04102 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04102 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04104 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04104 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04109 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04109 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04110 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04110 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04115 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04115 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04121 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04121 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04133 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04133 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04135 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04135 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04140 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04140 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04148 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04148 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04151 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04151 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04175 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04175 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04186 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04186 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04187 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04187 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04194 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04194 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04195 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04195 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04114 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04114 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04122 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04122 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04123 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04123 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04128 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04128 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04134 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04134 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04139 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04139 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04141 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04141 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04149 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04149 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04150 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04150 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04162 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04162 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04176 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04176 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04190 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04190 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04191 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04191 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04192 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04192 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04197 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04197 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04103 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04103 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04105 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04105 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04106 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04106 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04116 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04116 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04117 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04117 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04118 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04118 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04119 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04119 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04126 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04126 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04127 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04127 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04129 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04129 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04130 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04130 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04131 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04131 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04132 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04132 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04136 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04136 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04137 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04137 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04138 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04138 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04144 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04144 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04145 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04145 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04147 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04147 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04152 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04152 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04153 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04153 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04154 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04154 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04155 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04155 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04156 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04156 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04157 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04157 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04158 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04158 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04161 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04161 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04163 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04163 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04164 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04164 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04165 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04165 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04170 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04170 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04171 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04171 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04177 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04177 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04178 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04178 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04179 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04179 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04180 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04180 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04181 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04181 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04189 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04189 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04193 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04193 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04198 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04198 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04199 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04199 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04100 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04100 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04107 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04107 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04112 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04112 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04125 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04125 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04142 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04142 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04146 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04146 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04160 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04160 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04167 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04167 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04169 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04169 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04172 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04172 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04174 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04174 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04183 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04183 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04108 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04108 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04111 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04111 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04113 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04113 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04120 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04120 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04124 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04124 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04143 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04143 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04159 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04159 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04166 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04166 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04168 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04168 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04173 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04173 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04182 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04182 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04184 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04184 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04185 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04185 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04188 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04188 — skipped.
+[WARNING] Unknown course 'Data Engineering' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Cloud Computing' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Deep Learning' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Artificial Intelligence' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Cyber Security' for 231FA04196 — skipped.
+[WARNING] Unknown course 'AR/VR' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Blockchain' for 231FA04196 — skipped.
+[WARNING] Unknown course 'Internet of Things' for 231FA04196 — skipped.
+[INFO] Clean student data saved to 'clean_students.json'.
+[INFO] Step 5/7  Initialising section manager …
+[INFO] Step 6/7  Running course allocation …
+[INFO] Distribution mode for Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object: balanced (expected demand=0, sections=2, capacity/section=35)
+[INFO] Distribution mode for Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object: single (expected demand=0, sections=1, capacity/section=30)
+[INFO] Distribution mode for Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object: single (expected demand=0, sections=1, capacity/section=40)
+[INFO] Distribution mode for Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object: single (expected demand=0, sections=1, capacity/section=35)
+[INFO] Distribution mode for Course Name    Internet of Things
+Course Name                   NaN
+Name: 4, dtype: object: balanced (expected demand=0, sections=2, capacity/section=30)
+[INFO] Distribution mode for Course Name    Blockchain
+Course Name           NaN
+Name: 5, dtype: object: single (expected demand=0, sections=1, capacity/section=30)
+[INFO] Distribution mode for Course Name    Cyber Security
+Course Name               NaN
+Name: 6, dtype: object: single (expected demand=0, sections=1, capacity/section=30)
+[INFO] Distribution mode for Course Name    AR/VR
+Course Name      NaN
+Name: 7, dtype: object: single (expected demand=0, sections=1, capacity/section=30)
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04101 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04102 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04104 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04109 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04110 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04115 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04121 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04133 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04135 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04140 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04148 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04151 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04175 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04186 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04187 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04194 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04195 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04114 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04122 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04123 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04128 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04134 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04139 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04141 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04149 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04150 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04162 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04176 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04190 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04191 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04192 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04197 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04103 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04105 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04106 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04116 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04117 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04118 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04119 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04126 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04127 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04129 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04130 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04131 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04132 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04136 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04137 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04138 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04144 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04145 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04147 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04152 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04153 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04154 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04155 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04156 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04157 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04158 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04161 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04163 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04164 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04165 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04170 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04171 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04177 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04178 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04179 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04180 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04181 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04189 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04193 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04198 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04199 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04100 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04107 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04112 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04125 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04142 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04146 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04160 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04167 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04169 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04172 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04174 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04183 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04108 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04111 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04113 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04120 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04124 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04143 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04159 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04166 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section B for 231FA04168 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04173 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04182 (no valid G1 preference could be placed).
+[INFO] Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object fallback-allocated in Section A for 231FA04184 (no valid G1 preference could be placed).
+[INFO] Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object fallback-allocated in Section A for 231FA04185 (no valid G1 preference could be placed).
+[INFO] Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object fallback-allocated in Section A for 231FA04188 (no valid G1 preference could be placed).
+[INFO] Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object fallback-allocated in Section A for 231FA04196 (no valid G1 preference could be placed).
+[INFO] Allocation complete — allocated: 100, unallocated: 0
+[INFO] Step 6b/7 Balancing sections …
+[INFO]   Sections are balanced — no moves required.
+[INFO] Step 7/7  Generating report → 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\allocation_output.xlsx' …
+[INFO] Sheet 'Section A' written — 88 student(s).
+[INFO] Sheet 'Section B' written — 12 student(s).
+[INFO] Allocated sheet written — 100 student(s).
+[INFO] Unallocated sheet written — 0 student(s).
+[INFO] Report saved → C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\allocation_output.xlsx
+[INFO] ==============================================================
+[INFO] ALLOCATION COMPLETE
+[INFO]   Total students   : 100
+[INFO]   Fully allocated  : 0
+[INFO]   Partial (G1 only): 100
+[INFO]   Unallocated      : 0
+[INFO]   Output file      : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-141916-57d28276\allocation_output.xlsx
+[INFO]   Log file         : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\allocation.log
+[INFO] ==============================================================
+[INFO] Section enrolment summary:
+[INFO]   Course Name       Deep Learning
+Course Name    Machine Learning
+Name: 1, dtype: object  Section A :  25 /  30
+[INFO]   Course Name    AR/VR
+Course Name      NaN
+Name: 7, dtype: object  Section A :   0 /  30
+[INFO]   Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object  Section A :  13 /  35
+[INFO]   Course Name    Artificial Intelligence
+Course Name                        NaN
+Name: 0, dtype: object  Section B :  12 /  35
+[INFO]   Course Name    Blockchain
+Course Name           NaN
+Name: 5, dtype: object  Section A :   0 /  30
+[INFO]   Course Name    Cloud Computing
+Course Name                NaN
+Name: 2, dtype: object  Section A :  25 /  40
+[INFO]   Course Name    Cyber Security
+Course Name               NaN
+Name: 6, dtype: object  Section A :   0 /  30
+[INFO]   Course Name    Data Engineering
+Course Name                 NaN
+Name: 3, dtype: object  Section A :  25 /  35
+[INFO]   Course Name    Internet of Things
+Course Name                   NaN
+Name: 4, dtype: object  Section A :   0 /  30
+[INFO]   Course Name    Internet of Things
+Course Name                   NaN
+Name: 4, dtype: object  Section B :   0 /  30
+[INFO] 127.0.0.1 - - [14/Mar/2026 14:19:18] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 14:19:18] "GET /runs/20260314-141916-57d28276 HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 14:19:18] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 14:19:22] "GET /download/20260314-141916-57d28276/output HTTP/1.1" 200 -
+[INFO]  * Detected change in 'C:\\Users\\thish\\OneDrive\\Documents\\GitHub\\course_allocation\\input_processor.py', reloading

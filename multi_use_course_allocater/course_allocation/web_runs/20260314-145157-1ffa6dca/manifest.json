@@ -1,0 +1,10 @@
+{
+  "run_id": "20260314-145157-1ffa6dca",
+  "created": "2026-03-14 14:51:58",
+  "mode": "auto",
+  "skip_balance": false,
+  "responses": "ex1.xlsx",
+  "config": "course_config.xlsx",
+  "overrides": null,
+  "output": "allocation_output.xlsx"
+}

@@ -1,0 +1,50 @@
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\course_config.xlsx' …
+[INFO] Loaded 5 course(s) from config.
+[INFO] Step 2/7  Loading student responses from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\III-II_CSE_Dept._Electives_AY_2024-25_Responses2.xlsx' …
+[INFO] Loaded 8 response row(s) from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\III-II_CSE_Dept._Electives_AY_2024-25_Responses2.xlsx'.
+[INFO] Step 3/7  Cleaning data (dedup, CGPA normalisation) …
+[INFO] Processed 0 unique student(s).
+[INFO] Step 4/7  Validating course preferences …
+[WARNING] No student data to save.
+[INFO] Step 5/7  Initialising section manager …
+[INFO] Step 6/7  Running course allocation …
+[INFO] Distribution mode for Deep Learning: balanced (expected demand=0, sections=2, capacity/section=60)
+[INFO] Distribution mode for Digital Image Processing: single (expected demand=0, sections=1, capacity/section=60)
+[INFO] Distribution mode for Machine Learning: balanced (expected demand=0, sections=4, capacity/section=60)
+[INFO] Distribution mode for Advanced Java Programming: single (expected demand=0, sections=1, capacity/section=60)
+[INFO] Distribution mode for Advanced Data Structures: balanced (expected demand=0, sections=3, capacity/section=60)
+[INFO] Allocation complete — allocated: 0, unallocated: 0
+[INFO] Step 6b/7 Balancing sections …
+[INFO]   Sections are balanced — no moves required.
+[INFO] Step 7/7  Generating report → 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\allocation_output.xlsx' …
+[INFO] Allocated sheet written — 0 student(s).
+[INFO] Unallocated sheet written — 0 student(s).
+[INFO] Report saved → C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\allocation_output.xlsx
+[INFO] ==============================================================
+[INFO] ALLOCATION COMPLETE
+[INFO]   Total students   : 0
+[INFO]   Fully allocated  : 0
+[INFO]   Partial (G1 only): 0
+[INFO]   Unallocated      : 0
+[INFO]   Output file      : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-190555-428cbc87\allocation_output.xlsx
+[INFO]   Log file         : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\allocation.log
+[INFO] ==============================================================
+[INFO] Section enrolment summary:
+[INFO]   Advanced Data Structures  Section A :   0 /  60
+[INFO]   Advanced Data Structures  Section B :   0 /  60
+[INFO]   Advanced Data Structures  Section C :   0 /  60
+[INFO]   Advanced Java Programming  Section A :   0 /  60
+[INFO]   Deep Learning         Section A :   0 /  60
+[INFO]   Deep Learning         Section B :   0 /  60
+[INFO]   Digital Image Processing  Section A :   0 /  60
+[INFO]   Machine Learning      Section A :   0 /  60
+[INFO]   Machine Learning      Section B :   0 /  60
+[INFO]   Machine Learning      Section C :   0 /  60
+[INFO]   Machine Learning      Section D :   0 /  60
+[INFO] 127.0.0.1 - - [14/Mar/2026 19:05:56] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 19:05:56] "GET /runs/20260314-190555-428cbc87 HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 19:05:56] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO]  * Detected change in 'C:\\Users\\thish\\OneDrive\\Documents\\GitHub\\course_allocation\\input_processor.py', reloading

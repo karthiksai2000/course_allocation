@@ -1,0 +1,1769 @@
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\course_config.xlsx' …
+[INFO] Loaded 5 course(s) from config.
+[INFO] Step 2/7  Loading student responses from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\responses_with_cgpa.xlsx' …
+[INFO] Loaded 616 response row(s) from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\responses_with_cgpa.xlsx'.
+[INFO] Step 3/7  Cleaning data (dedup, CGPA normalisation) …
+[INFO] Duplicate response removed: 221FA04498
+[INFO] Duplicate response removed: 221fa04591
+[INFO] Duplicate response removed: 221FA04170
+[INFO] Duplicate response removed: 221FA04577
+[INFO] Duplicate response removed: 221FA04493
+[INFO] Duplicate response removed: 221FA04179
+[INFO] Duplicate response removed: 221FA04233
+[INFO] Duplicate response removed: 221FA04557 
+[INFO] Duplicate response removed: 221FA04549
+[INFO] Total duplicate(s) removed: 9
+[INFO] Processed 607 unique student(s).
+[INFO] Step 4/7  Validating course preferences …
+[INFO] Deep Learning skipped for 221FA04152: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04152 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04747: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04747 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04654: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04654 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04619: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04619 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04550: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04550 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04303 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04263 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04062: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04062 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04403 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04559 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04559: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04118 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04480 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04364: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04364 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04493 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04279 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04740 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04740: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04313 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04313: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04486 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04204: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04204 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04160: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04160 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04714 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04366 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04366: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04671: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04671 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04544: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04544 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04700 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04700: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04258 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04258: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04325: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04325 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04586: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04586 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04324 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04030: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04030 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04137: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04137 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04717 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04717: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04002: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04002 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04701 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04631 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04631: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04295 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04523 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04369 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04685: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04685 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04233 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04598 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04598: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04154 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04237: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04237 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04381 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04405 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04508 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04508: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 231LA04002 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04373 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04121 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04005 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04005: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04311 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04311: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04101 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04297 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04297: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04437: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04437 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04162: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04162 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04253: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04253 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04007: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04007 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04102: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04102 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04326: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04326 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04015: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04015 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04222 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04361 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04611 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04611: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04183 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04065: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04065 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04627 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04032 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04703 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04565: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04565 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04634 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04454: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04454 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04316 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04371: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04371 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04174: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04174 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04257: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04257 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04089: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04089 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04141: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04141 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04044 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04081 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04034: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04034 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04031 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04681: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04681 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04585 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04585: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04621 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04439 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04439: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04009 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04009: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04525: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04525 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04202 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04129: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04129 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04387 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04444: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04444 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04296 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04474 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04199 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04530: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04530 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04551 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04551: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04421 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04241 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04119 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04221: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04221 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04066 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04066: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04272 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04516 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04423: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04423 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04561: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04561 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04165 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04476 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04155 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04524 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04524: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04284: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04284 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04054 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04244 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04504 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04504: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04216 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04321: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04321 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04337: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04337 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04553 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04553: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04686 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04686: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04669: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04669 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04076 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04639 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04431 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04357 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04357: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04127 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04127: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04122 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04282: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04282 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04558 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04385 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04348 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04348: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04413 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04449: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04449 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04269: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04269 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04494: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04494 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04187: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04187 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04382: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04382 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04145 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04145: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04196 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04275: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04275 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04593: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04593 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04415 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04624: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04624 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04227 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04197 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04542: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04542 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04041: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04041 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04581: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04581 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04287 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04352: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04352 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04427 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04167 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04167: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04083 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04652 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04674 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04656: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04656 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04074 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04519: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04519 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04626 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04049: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04049 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04376 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04684 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04450 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04698 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04599: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04599 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04718 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04048: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04048 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04164 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04267 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04224: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04224 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04157: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04157 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04136: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04136 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04094 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04020 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04448 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04262 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04406: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04406 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04475 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04614 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04614: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04479 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04727 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04070: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04070 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04538 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04397 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04242: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04242 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04604 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04151: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04151 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04386: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04386 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04741: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04741 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04206: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04206 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04512 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04722 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04728 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04350: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04350 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04286 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04672 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04391 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04391: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04497: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04497 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04150 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04203: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04203 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04133 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04584: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04584 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04388 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04217: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04217 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04330 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04226 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04657 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04657: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04612 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04176: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04176 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04441 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04058 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04742 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 231LA04001 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04312 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04312: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04666 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04238 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04607 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04607: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04059: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04059 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04617 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04617: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04016: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04016 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04252 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04725 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04107: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04107 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04283 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04039 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04419 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04419: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04036: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04036 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04080 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04080: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04465: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04465 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04574 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04134: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04134 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04086: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04086 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04536: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04536 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04726 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04709 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04552 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04552: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04239: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04239 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04422 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04149: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04149 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04319: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04319 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04451 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04511: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04511 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04503 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04503: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04394 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04563: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04563 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04649 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04649: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04358 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04358: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04623 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04623: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04027 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04470: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04470 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04195 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04580: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04580 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04690 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04228 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04534: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04534 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04051: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04051 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04600: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04600 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04610 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221Fa04569 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04201: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04201 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04232 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04622 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04622: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04268: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04268 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04459: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04459 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04305 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04071: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04071 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04179 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04483 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04105 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04432: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04432 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04420 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04420: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04040 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04188: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04188 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04637: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04637 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04299 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04495 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04495: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04334: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04334 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04484 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04171: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04171 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04593 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04037 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04347: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04347 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04501 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04501: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04549: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04549 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04189: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04189 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04632 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04170 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04746 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04139: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04139 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04453: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04453 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04143 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04695 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04180: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04180 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04256 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04378 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04210: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04210 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04091 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04091: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04457: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04457 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04597: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04597 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04147: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04147 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04153 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04153: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04507 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221fa04023 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04023: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04050: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04050 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04298 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04078 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04078: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04546 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04546: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04505 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04505: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04108: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04108 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04606 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04485: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04485 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04117: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04117 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04245 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04072: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04072 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221fa04053 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04053: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04447 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04392 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04527: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04527 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04123: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04123 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04425 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04425: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 22FA04464 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04104: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04104 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04468: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04468 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04704 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04320 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04022: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04022 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04724: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04724 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04142 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04190: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04190 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04513 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04112: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04112 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04466: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04466 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04192: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04192 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04436: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04436 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04472 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04716: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04716 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04033 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04033: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04096 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04596 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04460 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04266: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04266 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04290 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04372 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04467: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04467 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04128 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04329 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04240: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04240 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04338 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04715: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04715 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04277: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04277 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04682 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04682: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa0710 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa0710: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04087 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04087: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04673: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04673 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04514 preferences: already completed.
+[INFO] Removed 'Machine Learning' from Hemanth Seelam preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04430 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04430: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04302 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04140 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04223 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04616: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04616 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04075: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04075 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04438 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04212 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04638: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04638 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04249 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04045: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04045 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04359: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04359 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04292: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04292 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04502 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04540: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04540 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04402 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04061: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04061 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04271 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04568 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221Fa04556 preferences: already completed.
+[INFO] Deep Learning skipped for 221Fa04556: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04487 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04198: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04198 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04261: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04261 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04577 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04218: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04218 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04103: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04103 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04342 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04342: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04496 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04250: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04250 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04317: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04317 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04575: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04575 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04609 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04609: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04641 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04230 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04735 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04211: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04211 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04285: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04285 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04603 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04603: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04178 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04356: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04356 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04642 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04235 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04618 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04618: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04615 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04660 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04281 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04281: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04182 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04138 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04567 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04011: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04011 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04570: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04570 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04168: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04168 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04662 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04492 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04346: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04346 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04640 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04640: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04531: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04531 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04063 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04064: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04064 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04620 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04219: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04219 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04332 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04332: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04274 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04113 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04335 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04335: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04389: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04389 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04435: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04435 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04073 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04038: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04038 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04537: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04537 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04554: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04554 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04679 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04679: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04591 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04591: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04668 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04456 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04291 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04576: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04576 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04675: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04675 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04481 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04481: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04644 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04644: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04491: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04491 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04557: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04557 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04443 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04004 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04004: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04706: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04706 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04418 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04343: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04343 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04583: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04583 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04719 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04719: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04166: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04166 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04370: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04370 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04043: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04043 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04708 preferences: already completed.
+[INFO] Deep Learning skipped for 211FA04334: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 211FA04334 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 231LA04003 preferences: already completed.
+[INFO] Deep Learning skipped for 231LA04003: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221fa04013: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04013 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04300 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04115 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04115: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04737: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04737 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04024 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04506: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04506 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04341 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04678: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04678 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04301: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04301 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04653 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04111: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04111 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04648 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04229 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04255: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04255 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04331 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04482 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04340 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04340: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04260: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04260 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04705 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04705: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04056 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04056: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04215: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04215 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04588 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04588: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221Fa04120 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04085 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04085: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221fa04144 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04132 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04428 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04247 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04236 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04517 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221fa04114 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04114: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04692 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04452 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04362 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04029 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04029: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04733 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04248 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04310: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04310 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04625 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04625: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04732 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04712 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04712: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04308 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04220: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04220 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04093 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04181: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04181 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04169: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04169 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04458 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04116 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04156 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04548: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04548 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04707: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04707 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04161: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04161 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04052 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04052: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04315 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04315: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04273: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04273 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04234 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04265 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04225: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04225 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04490: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04490 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04353: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04353 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04014: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04014 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04677: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04677 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04345 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04246 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04028 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221fa04744 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04744: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04008: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04008 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04571: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04571 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04046: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04046 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04594: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04594 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04375 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04587: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04587 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04446: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04446 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04214: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04214 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04057 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04057: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04683 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04696: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04696 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04099 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04442 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04006: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04006 preferences: already completed.
+[INFO] Deep Learning skipped for 231LA04006: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 231LA04006 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04658 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04738: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04738 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04697 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04510 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04409 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04650: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04650 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04318: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04318 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04689 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04664: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04664 preferences: already completed.
+[INFO] Removed 'Advanced Java Programming' from 221FA04351 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04351: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04146 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04146: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04434: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04434 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04520 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04276 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04529 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04665: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04665 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04379 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04663 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04694 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04473 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04473: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04629: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04629 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04185: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04185 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04270: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04270 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04721 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04693 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04399 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04191: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04191 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04193: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04193 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 231LA04005 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04404 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04327: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04327 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04736: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04736 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04395: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04395 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04471: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04471 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04018 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04018: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 221FA04084: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04084 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04307 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04469: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221fa04469 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04384 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04294 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04017: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221FA04017 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04095 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04498 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04498: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04126 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04518 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04680: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Java Programming' from 221FA04680 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04564: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04564 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04159 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04424 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04207: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04207 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04411: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04411 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04069 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04148 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04393 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04393: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04067 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04440: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04440 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04079 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04010: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Advanced Data Structure' from 221fa04010 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04463: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04463 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04416 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04555 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04555: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04368 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04539: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04539 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04293: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04293 preferences: already completed.
+[INFO] Removed 'Advanced Data Structure' from 221FA04573 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04573: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04630 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04019: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04019 preferences: already completed.
+[INFO] Removed 'Digital Image Processing' from 221FA04628 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04628: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Machine Learning' from 221FA04339 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04377 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04205: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04205 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04445 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04687: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04687 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221FA04100 preferences: already completed.
+[INFO] Removed 'Machine Learning' from 221fa04135 preferences: already completed.
+[INFO] Deep Learning skipped for 221fa04579: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221fa04579 preferences: already completed.
+[INFO] Deep Learning skipped for 221FA04259: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Removed 'Digital Image Processing' from 221FA04259 preferences: already completed.
+[INFO] Clean student data saved to 'clean_students.json'.
+[INFO] Step 5/7  Initialising section manager …
+[INFO] Step 6/7  Running course allocation …
+[INFO] Distribution mode for Deep Learning: balanced (expected demand=152, sections=2, capacity/section=60)
+[INFO] Distribution mode for Digital Image Processing: single (expected demand=73, sections=1, capacity/section=60)
+[INFO] Distribution mode for Machine Learning: balanced (expected demand=271, sections=4, capacity/section=60)
+[INFO] Distribution mode for Advanced Java Programming: single (expected demand=39, sections=1, capacity/section=60)
+[INFO] Distribution mode for Advanced Data Structure: balanced (expected demand=72, sections=3, capacity/section=60)
+[INFO] Machine Learning allocated in Section A for 221FA04152.
+[INFO] Machine Learning allocated in Section B for 221FA04747.
+[INFO] Machine Learning allocated in Section C for 221FA04654.
+[INFO] Machine Learning allocated in Section D for 221FA04619.
+[INFO] Machine Learning allocated in Section A for 221fa04550.
+[INFO] Deep Learning allocated in Section A for 221FA04303.
+[INFO] Digital Image Processing allocated in Section A for 221FA04263.
+[INFO] Machine Learning allocated in Section B for 221fa04062.
+[INFO] Deep Learning allocated in Section B for 221FA04403.
+[INFO] Machine Learning allocated in Section C for 221FA04559.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04118.
+[INFO] Deep Learning allocated in Section A for 221FA04480.
+[INFO] Machine Learning allocated in Section D for 221FA04364.
+[INFO] Digital Image Processing allocated in Section A for 221FA04493.
+[INFO] Deep Learning allocated in Section B for 221FA04279.
+[INFO] Machine Learning allocated in Section A for 221FA04740.
+[INFO] Machine Learning allocated in Section B for 221FA04313.
+[INFO] Deep Learning allocated in Section A for 221FA04486.
+[INFO] Machine Learning allocated in Section C for 221FA04204.
+[INFO] Machine Learning allocated in Section D for 221FA04160.
+[INFO] Deep Learning allocated in Section B for 221FA04714.
+[INFO] Machine Learning allocated in Section A for 221FA04366.
+[INFO] Machine Learning allocated in Section B for 221FA04671.
+[INFO] Machine Learning allocated in Section C for 221FA04544.
+[INFO] Machine Learning allocated in Section D for 221FA04700.
+[INFO] Machine Learning allocated in Section A for 221FA04258.
+[INFO] Machine Learning allocated in Section B for 221FA04325.
+[INFO] Machine Learning allocated in Section C for 221FA04586.
+[INFO] Deep Learning allocated in Section A for 221FA04324.
+[INFO] Machine Learning allocated in Section D for 221FA04030.
+[INFO] Machine Learning allocated in Section A for 221FA04137.
+[INFO] Machine Learning allocated in Section B for 221FA04717.
+[INFO] Digital Image Processing allocated in Section A for 221fa04002.
+[INFO] Deep Learning allocated in Section B for 221FA04701.
+[INFO] Machine Learning allocated in Section C for 221FA04631.
+[INFO] Advanced Data Structure allocated in Section B for 221fa04295.
+[INFO] Deep Learning allocated in Section A for 221FA04523.
+[INFO] Digital Image Processing allocated in Section A for 221fa04369.
+[INFO] Machine Learning allocated in Section D for 221FA04685.
+[INFO] Digital Image Processing allocated in Section A for 221FA04233.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04598.
+[INFO] Digital Image Processing allocated in Section A for 221FA04154.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04237.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04381.
+[INFO] Deep Learning allocated in Section B for 221FA04405.
+[INFO] Machine Learning allocated in Section A for 221FA04508.
+[INFO] Deep Learning allocated in Section A for 231LA04002.
+[INFO] Deep Learning allocated in Section B for 221FA04373.
+[INFO] Deep Learning allocated in Section A for 221FA04121.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04005.
+[INFO] Digital Image Processing allocated in Section A for 221FA04311.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04101.
+[INFO] Machine Learning allocated in Section B for 221FA04297.
+[INFO] Machine Learning allocated in Section C for 221FA04437.
+[INFO] Machine Learning allocated in Section D for 221fa04162.
+[INFO] Machine Learning allocated in Section A for 221FA04253.
+[INFO] Digital Image Processing allocated in Section A for 221FA04007.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04102.
+[INFO] Machine Learning allocated in Section B for 221FA04326.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04015.
+[INFO] Deep Learning allocated in Section B for 221FA04222.
+[INFO] Digital Image Processing allocated in Section A for 221FA04361.
+[INFO] Machine Learning allocated in Section C for 221FA04611.
+[INFO] Deep Learning allocated in Section A for 221FA04183.
+[INFO] Machine Learning allocated in Section D for 221FA04065.
+[INFO] Deep Learning allocated in Section B for 221FA04627.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04032.
+[INFO] Deep Learning allocated in Section A for 221FA04703.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04565.
+[INFO] Deep Learning allocated in Section B for 221FA04634.
+[INFO] Machine Learning allocated in Section A for 221fa04454.
+[INFO] Deep Learning allocated in Section A for 221FA04316.
+[INFO] Machine Learning allocated in Section B for 221FA04371.
+[INFO] Machine Learning allocated in Section C for 221FA04174.
+[INFO] Machine Learning allocated in Section D for 221FA04257.
+[INFO] Machine Learning allocated in Section A for 221FA04089.
+[INFO] Machine Learning allocated in Section B for 221fa04141.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04044.
+[INFO] Advanced Data Structure allocated in Section C for 221fa04081.
+[INFO] Machine Learning allocated in Section C for 221FA04034.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04031.
+[INFO] Machine Learning allocated in Section D for 221FA04681.
+[INFO] Digital Image Processing allocated in Section A for 221FA04585.
+[INFO] Deep Learning allocated in Section B for 221fa04621.
+[INFO] Machine Learning allocated in Section A for 221FA04439.
+[INFO] Machine Learning allocated in Section B for 221fa04009.
+[INFO] Machine Learning allocated in Section C for 221FA04525.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04202.
+[INFO] Machine Learning allocated in Section D for 221FA04129.
+[INFO] Deep Learning allocated in Section A for 221FA04387.
+[INFO] Machine Learning allocated in Section A for 221FA04444.
+[INFO] Deep Learning allocated in Section B for 221FA04296.
+[INFO] Deep Learning allocated in Section A for 221FA04474.
+[INFO] Digital Image Processing allocated in Section A for 221FA04199.
+[INFO] Machine Learning allocated in Section B for 221FA04530.
+[INFO] Machine Learning allocated in Section C for 221FA04551.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04421.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04241.
+[INFO] Deep Learning allocated in Section B for 221FA04119.
+[INFO] Machine Learning allocated in Section D for 221FA04221.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04066.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04272.
+[INFO] Deep Learning allocated in Section A for 221FA04516.
+[INFO] Machine Learning allocated in Section A for 221fa04423.
+[INFO] Machine Learning allocated in Section B for 221FA04561.
+[INFO] Digital Image Processing allocated in Section A for 221FA04165.
+[INFO] Deep Learning allocated in Section B for 221FA04476.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04155.
+[INFO] Machine Learning allocated in Section C for 221FA04524.
+[INFO] Machine Learning allocated in Section D for 221FA04284.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04054.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04244.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04504.
+[INFO] Digital Image Processing allocated in Section A for 221FA04216.
+[INFO] Machine Learning allocated in Section A for 221FA04321.
+[INFO] Machine Learning allocated in Section B for 221fa04337.
+[INFO] Machine Learning allocated in Section C for 221FA04553.
+[INFO] Machine Learning allocated in Section D for 221FA04686.
+[INFO] Machine Learning allocated in Section A for 221FA04669.
+[INFO] Deep Learning allocated in Section A for 221FA04076.
+[INFO] Deep Learning allocated in Section B for 221FA04639.
+[INFO] Deep Learning allocated in Section A for 221fa04431.
+[INFO] Machine Learning allocated in Section B for 221FA04357.
+[INFO] Digital Image Processing allocated in Section A for 221FA04127.
+[INFO] Deep Learning allocated in Section B for 221FA04122.
+[INFO] Machine Learning allocated in Section C for 221FA04282.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04558.
+[INFO] Deep Learning allocated in Section A for 221FA04385.
+[INFO] Digital Image Processing allocated in Section A for 221FA04348.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04413.
+[INFO] Machine Learning allocated in Section D for 221FA04449.
+[INFO] Machine Learning allocated in Section A for 221FA04269.
+[INFO] Machine Learning allocated in Section B for 221FA04494.
+[INFO] Machine Learning allocated in Section C for 221FA04187.
+[INFO] Machine Learning allocated in Section D for 221fa04382.
+[INFO] Machine Learning allocated in Section A for 221FA04145.
+[INFO] Digital Image Processing allocated in Section A for 221fa04196.
+[INFO] Machine Learning allocated in Section B for 221FA04275.
+[INFO] Machine Learning allocated in Section C for 221FA04593.
+[INFO] Digital Image Processing allocated in Section A for 221FA04415.
+[INFO] Machine Learning allocated in Section D for 221FA04624.
+[INFO] Deep Learning allocated in Section B for 221FA04227.
+[INFO] Digital Image Processing allocated in Section A for 221fa04197.
+[INFO] Machine Learning allocated in Section A for 221fa04542.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04041.
+[INFO] Machine Learning allocated in Section B for 221FA04581.
+[INFO] Deep Learning allocated in Section A for 221FA04287.
+[INFO] Machine Learning allocated in Section C for 221fa04352.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04427.
+[INFO] Machine Learning allocated in Section D for 221fa04167.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04083.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04652.
+[INFO] Deep Learning allocated in Section B for 221FA04674.
+[INFO] Machine Learning allocated in Section A for 221FA04656.
+[INFO] Deep Learning allocated in Section A for 221FA04074.
+[INFO] Digital Image Processing allocated in Section A for 221FA04519.
+[INFO] Deep Learning allocated in Section B for 221FA04626.
+[INFO] Machine Learning allocated in Section B for 221FA04049.
+[INFO] Deep Learning allocated in Section A for 221FA04376.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04684.
+[INFO] Deep Learning allocated in Section B for 221FA04450.
+[INFO] Deep Learning allocated in Section A for 221FA04698.
+[INFO] Machine Learning allocated in Section C for 221FA04599.
+[INFO] Deep Learning allocated in Section B for 221FA04718.
+[INFO] Machine Learning allocated in Section D for 221fa04048.
+[INFO] Digital Image Processing allocated in Section A for 221FA04164.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04267.
+[INFO] Machine Learning allocated in Section A for 221fa04224.
+[INFO] Machine Learning allocated in Section B for 221fa04157.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04136.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04094.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04020.
+[INFO] Deep Learning allocated in Section A for 221FA04448.
+[INFO] Digital Image Processing allocated in Section A for 221FA04262.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04406.
+[INFO] Deep Learning allocated in Section B for 221FA04475.
+[INFO] Machine Learning allocated in Section C for 221FA04614.
+[INFO] Deep Learning allocated in Section A for 221FA04479.
+[INFO] Deep Learning allocated in Section B for 221FA04727.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04070.
+[INFO] Deep Learning allocated in Section A for 221FA04538.
+[INFO] Deep Learning allocated in Section B for 221FA04397.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04242.
+[INFO] Deep Learning allocated in Section A for 221FA04604.
+[INFO] Machine Learning allocated in Section D for 221FA04151.
+[INFO] Machine Learning allocated in Section A for 221FA04386.
+[INFO] Machine Learning allocated in Section B for 221FA04741.
+[INFO] Machine Learning allocated in Section C for 221FA04206.
+[INFO] Deep Learning allocated in Section B for 221FA04512.
+[INFO] Deep Learning allocated in Section A for 221FA04722.
+[INFO] Deep Learning allocated in Section B for 221FA04728.
+[INFO] Machine Learning allocated in Section D for 221FA04350.
+[INFO] Deep Learning allocated in Section A for 221FA04286.
+[INFO] Deep Learning allocated in Section B for 221FA04672.
+[INFO] Machine Learning allocated in Section A for 221FA04391.
+[INFO] Machine Learning allocated in Section B for 221FA04497.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04150.
+[INFO] Machine Learning allocated in Section C for 221FA04203.
+[INFO] Deep Learning allocated in Section A for 221FA04133.
+[INFO] Machine Learning allocated in Section D for 221FA04584.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04388.
+[INFO] Digital Image Processing allocated in Section A for 221FA04217.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04330.
+[INFO] Digital Image Processing allocated in Section A for 221FA04226.
+[INFO] Digital Image Processing allocated in Section A for 221FA04657.
+[INFO] Deep Learning allocated in Section B for 221FA04612.
+[INFO] Machine Learning allocated in Section A for 221FA04176.
+[INFO] Deep Learning allocated in Section A for 221FA04441.
+[INFO] Digital Image Processing allocated in Section A for 221fa04058.
+[INFO] Deep Learning allocated in Section B for 221FA04742.
+[INFO] Deep Learning allocated in Section A for 231LA04001.
+[INFO] Machine Learning allocated in Section B for 221FA04312.
+[INFO] Deep Learning allocated in Section B for 221FA04666.
+[INFO] Digital Image Processing allocated in Section A for 221fa04238.
+[INFO] Machine Learning allocated in Section C for 221FA04607.
+[INFO] Advanced Data Structure allocated in Section B for 221fa04059.
+[INFO] Machine Learning allocated in Section D for 221FA04617.
+[INFO] Digital Image Processing allocated in Section A for 221FA04016.
+[INFO] Deep Learning allocated in Section A for 221FA04252.
+[INFO] Deep Learning allocated in Section B for 221FA04725.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04107.
+[INFO] Deep Learning allocated in Section A for 221FA04283.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04039.
+[INFO] Machine Learning allocated in Section A for 221FA04419.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04036.
+[INFO] Machine Learning allocated in Section B for 221fa04080.
+[INFO] Machine Learning allocated in Section C for 221FA04465.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04574.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04134.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04086.
+[INFO] Machine Learning allocated in Section D for 221FA04536.
+[INFO] Deep Learning allocated in Section B for 221fa04726.
+[INFO] Deep Learning allocated in Section A for 221FA04709.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04552.
+[INFO] Machine Learning allocated in Section A for 221FA04239.
+[INFO] Deep Learning allocated in Section B for 221FA04422.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04149.
+[INFO] Machine Learning allocated in Section B for 221FA04319.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04451.
+[INFO] Machine Learning allocated in Section C for 221FA04511.
+[INFO] Machine Learning allocated in Section D for 221FA04503.
+[INFO] Deep Learning allocated in Section A for 221FA04394.
+[INFO] Advanced Data Structure allocated in Section C for 221fa04563.
+[INFO] Machine Learning allocated in Section A for 221FA04649.
+[INFO] Digital Image Processing allocated in Section A for 221FA04358.
+[INFO] Machine Learning allocated in Section B for 221FA04623.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04027.
+[INFO] Machine Learning allocated in Section C for 221FA04470.
+[INFO] Digital Image Processing allocated in Section A for 221FA04195.
+[INFO] Machine Learning allocated in Section D for 221FA04580.
+[INFO] Deep Learning allocated in Section B for 221FA04690.
+[INFO] Deep Learning allocated in Section A for 221FA04228.
+[INFO] Machine Learning allocated in Section A for 221fa04534.
+[INFO] Machine Learning allocated in Section B for 221FA04051.
+[INFO] Machine Learning allocated in Section C for 221FA04600.
+[INFO] Deep Learning allocated in Section B for 221FA04610.
+[INFO] Digital Image Processing allocated in Section A for 221Fa04569.
+[INFO] Machine Learning allocated in Section D for 221FA04201.
+[INFO] Deep Learning allocated in Section A for 221FA04232.
+[INFO] Machine Learning allocated in Section A for 221FA04622.
+[INFO] Machine Learning allocated in Section B for 221FA04268.
+[INFO] Machine Learning allocated in Section C for 221FA04459.
+[INFO] Deep Learning allocated in Section B for 221FA04305.
+[INFO] Machine Learning allocated in Section D for 221FA04071.
+[INFO] Digital Image Processing allocated in Section A for 221FA04179.
+[INFO] Deep Learning allocated in Section A for 221fa04483.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04105.
+[INFO] Machine Learning allocated in Section A for 221FA04432.
+[INFO] Machine Learning allocated in Section B for 221FA04420.
+[INFO] Advanced Data Structure allocated in Section B for 221fa04040.
+[INFO] Machine Learning allocated in Section C for 221FA04188.
+[INFO] Machine Learning allocated in Section D for 221FA04637.
+[INFO] Deep Learning allocated in Section B for 221FA04299.
+[INFO] Machine Learning allocated in Section A for 221FA04495.
+[INFO] Machine Learning allocated in Section B for 221FA04334.
+[INFO] Deep Learning allocated in Section A for 221FA04484.
+[INFO] Machine Learning allocated in Section C for 221FA04171.
+[INFO] Deep Learning allocated in Section B for 221fa04593.
+[INFO] Digital Image Processing allocated in Section A for 221FA04037.
+[INFO] Machine Learning allocated in Section D for 221FA04347.
+[INFO] Machine Learning allocated in Section A for 221FA04501.
+[INFO] Machine Learning allocated in Section B for 221FA04549.
+[INFO] Machine Learning allocated in Section C for 221FA04189.
+[INFO] Deep Learning allocated in Section A for 221FA04632.
+[INFO] Digital Image Processing allocated in Section A for 221FA04170.
+[INFO] Deep Learning allocated in Section B for 221FA04746.
+[INFO] Machine Learning allocated in Section D for 221FA04139.
+[INFO] Machine Learning allocated in Section A for 221fa04453.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04143.
+[INFO] Deep Learning allocated in Section A for 221FA04695.
+[INFO] Machine Learning allocated in Section B for 221FA04180.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04256.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04378.
+[INFO] Machine Learning allocated in Section C for 221FA04210.
+[INFO] Machine Learning allocated in Section D for 221FA04091.
+[INFO] Digital Image Processing allocated in Section A for 221FA04457.
+[INFO] Machine Learning allocated in Section A for 221FA04597.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04147.
+[INFO] Machine Learning allocated in Section B for 221FA04153.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04507.
+[INFO] Machine Learning allocated in Section C for 221fa04023.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04050.
+[INFO] Digital Image Processing allocated in Section A for 221FA04298.
+[INFO] Digital Image Processing allocated in Section A for 221FA04078.
+[INFO] Machine Learning allocated in Section D for 221FA04546.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04505.
+[INFO] Machine Learning allocated in Section A for 221FA04108.
+[INFO] Deep Learning allocated in Section B for 221FA04606.
+[INFO] Machine Learning allocated in Section B for 221FA04485.
+[INFO] Machine Learning allocated in Section C for 221fa04117.
+[INFO] Deep Learning allocated in Section A for 221FA04245.
+[INFO] Machine Learning allocated in Section D for 221FA04072.
+[INFO] Machine Learning allocated in Section A for 221fa04053.
+[INFO] Deep Learning allocated in Section B for 221FA04447.
+[INFO] Deep Learning allocated in Section A for 221FA04392.
+[INFO] Machine Learning allocated in Section B for 221FA04527.
+[INFO] Machine Learning allocated in Section C for 221fa04123.
+[INFO] Machine Learning allocated in Section D for 221FA04425.
+[INFO] Deep Learning allocated in Section B for 22FA04464.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04104.
+[INFO] Machine Learning allocated in Section A for 221FA04468.
+[INFO] Deep Learning allocated in Section A for 221FA04704.
+[INFO] Digital Image Processing allocated in Section A for 221FA04320.
+[INFO] Machine Learning allocated in Section B for 221FA04022.
+[INFO] Digital Image Processing allocated in Section A for 221FA04724.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04142.
+[INFO] Machine Learning allocated in Section C for 221FA04190.
+[INFO] Deep Learning allocated in Section B for 221FA04513.
+[INFO] Machine Learning allocated in Section D for 221FA04112.
+[INFO] Digital Image Processing allocated in Section A for 221fa04466.
+[INFO] Machine Learning allocated in Section A for 221fa04192.
+[INFO] Machine Learning allocated in Section B for 221FA04436.
+[INFO] Deep Learning allocated in Section A for 221FA04472.
+[INFO] Machine Learning allocated in Section C for 221FA04716.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04033.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04096.
+[INFO] Deep Learning allocated in Section B for 221FA04596.
+[INFO] Deep Learning allocated in Section A for 221FA04460.
+[INFO] Machine Learning allocated in Section D for 221FA04266.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04290.
+[INFO] Digital Image Processing allocated in Section A for 221FA04372.
+[INFO] Machine Learning allocated in Section A for 221fa04467.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04128.
+[INFO] Digital Image Processing allocated in Section A for 221FA04329.
+[INFO] Machine Learning allocated in Section B for 221FA04240.
+[INFO] Deep Learning allocated in Section B for 221fa04338.
+[INFO] Machine Learning allocated in Section C for 221fa04715.
+[INFO] Machine Learning allocated in Section D for 221FA04277.
+[INFO] Machine Learning allocated in Section A for 221FA04682.
+[INFO] Machine Learning allocated in Section B for 221fa0710.
+[INFO] Machine Learning allocated in Section C for 221FA04087.
+[INFO] Machine Learning allocated in Section D for 221fa04673.
+[INFO] Deep Learning allocated in Section A for 221FA04514.
+[INFO] Deep Learning allocated in Section B for Hemanth Seelam.
+[INFO] Machine Learning allocated in Section A for 221FA04430.
+[INFO] Deep Learning allocated in Section A for 221FA04302.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04140.
+[INFO] Digital Image Processing allocated in Section A for 221FA04223.
+[INFO] Machine Learning allocated in Section B for 221FA04616.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04075.
+[INFO] Deep Learning allocated in Section B for 221FA04438.
+[INFO] Digital Image Processing allocated in Section A for 221FA04212.
+[INFO] Machine Learning allocated in Section C for 221FA04638.
+[INFO] Deep Learning allocated in Section A for 221FA04249.
+[INFO] Machine Learning allocated in Section D for 221FA04045.
+[INFO] Digital Image Processing allocated in Section A for 221FA04359.
+[INFO] Machine Learning allocated in Section A for 221FA04292.
+[INFO] Deep Learning allocated in Section B for 221FA04502.
+[INFO] Machine Learning allocated in Section B for 221FA04540.
+[INFO] Deep Learning allocated in Section A for 221FA04402.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04061.
+[INFO] Digital Image Processing allocated in Section A for 221FA04271.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04568.
+[INFO] Digital Image Processing allocated in Section A for 221Fa04556.
+[INFO] Deep Learning allocated in Section B for 221FA04487.
+[INFO] Machine Learning allocated in Section C for 221FA04198.
+[INFO] Machine Learning allocated in Section D for 221FA04261.
+[INFO] Digital Image Processing allocated in Section A for 221FA04577.
+[INFO] Machine Learning allocated in Section A for 221FA04218.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04103.
+[INFO] Machine Learning allocated in Section B for 221FA04342.
+[INFO] Deep Learning allocated in Section A for 221FA04496.
+[INFO] Machine Learning allocated in Section C for 221FA04250.
+[INFO] Machine Learning allocated in Section D for 221FA04317.
+[INFO] Machine Learning allocated in Section A for 221FA04575.
+[INFO] Machine Learning allocated in Section B for 221FA04609.
+[INFO] Deep Learning allocated in Section B for 221fa04641.
+[INFO] Deep Learning allocated in Section A for 221FA04230.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04735.
+[INFO] Machine Learning allocated in Section C for 221FA04211.
+[INFO] Machine Learning allocated in Section D for 221FA04285.
+[INFO] Machine Learning allocated in Section A for 221FA04603.
+[INFO] Deep Learning allocated in Section B for 221FA04178.
+[INFO] Machine Learning allocated in Section B for 221FA04356.
+[INFO] Deep Learning allocated in Section A for 221FA04642.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04235.
+[INFO] Machine Learning allocated in Section C for 221FA04618.
+[INFO] Deep Learning allocated in Section B for 221FA04615.
+[INFO] Deep Learning allocated in Section A for 221FA04660.
+[INFO] Machine Learning allocated in Section D for 221FA04281.
+[INFO] Digital Image Processing allocated in Section A for 221FA04182.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04138.
+[INFO] Digital Image Processing allocated in Section A for 221FA04567.
+[INFO] Machine Learning allocated in Section A for 221fa04011.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04570.
+[INFO] Machine Learning allocated in Section B for 221FA04168.
+[INFO] Deep Learning allocated in Section B for 221FA04662.
+[INFO] Deep Learning allocated in Section A for 221FA04492.
+[INFO] Machine Learning allocated in Section C for 221FA04346.
+[INFO] Machine Learning allocated in Section D for 221fa04640.
+[INFO] Machine Learning allocated in Section A for 221FA04531.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04063.
+[INFO] Digital Image Processing allocated in Section A for 221FA04064.
+[INFO] Deep Learning allocated in Section B for 221FA04620.
+[INFO] Machine Learning allocated in Section B for 221FA04219.
+[INFO] Digital Image Processing allocated in Section A for 221FA04332.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04274.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04113.
+[INFO] Machine Learning allocated in Section C for 221FA04335.
+[INFO] Machine Learning allocated in Section D for 221fa04389.
+[INFO] Machine Learning allocated in Section A for 221FA04435.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04073.
+[INFO] Machine Learning allocated in Section B for 221FA04038.
+[INFO] Machine Learning allocated in Section C for 221FA04537.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04554.
+[INFO] Machine Learning allocated in Section D for 221FA04679.
+[INFO] Machine Learning allocated in Section A for 221fa04591.
+[INFO] Deep Learning allocated in Section A for 221FA04668.
+[INFO] Deep Learning allocated in Section B for 221FA04456.
+[INFO] Deep Learning allocated in Section A for 221FA04291.
+[INFO] Machine Learning allocated in Section B for 221FA04576.
+[INFO] Machine Learning allocated in Section C for 221FA04675.
+[INFO] Machine Learning allocated in Section D for 221fa04481.
+[INFO] Machine Learning allocated in Section A for 221FA04644.
+[INFO] Machine Learning allocated in Section B for 221FA04491.
+[INFO] Machine Learning allocated in Section C for 221FA04557.
+[INFO] Deep Learning allocated in Section B for 221FA04443.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04004.
+[INFO] Machine Learning allocated in Section D for 221fa04706.
+[INFO] Deep Learning allocated in Section A for 221FA04418.
+[INFO] Machine Learning allocated in Section A for 221FA04343.
+[INFO] Machine Learning allocated in Section B for 221FA04583.
+[INFO] Machine Learning allocated in Section C for 221FA04719.
+[INFO] Machine Learning allocated in Section D for 221FA04166.
+[INFO] Digital Image Processing allocated in Section A for 221FA04370.
+[INFO] Machine Learning allocated in Section A for 221FA04043.
+[INFO] Deep Learning allocated in Section B for 221FA04708.
+[INFO] Advanced Data Structure allocated in Section C for 211FA04334.
+[INFO] Machine Learning allocated in Section B for 231LA04003.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04013.
+[INFO] Deep Learning allocated in Section A for 221FA04300.
+[INFO] Digital Image Processing allocated in Section A for 221FA04115.
+[INFO] Machine Learning allocated in Section C for 221FA04737.
+[INFO] Digital Image Processing allocated in Section A for 221FA04024.
+[INFO] Digital Image Processing allocated in Section A for 221FA04506.
+[INFO] Deep Learning allocated in Section B for 221fa04341.
+[INFO] Machine Learning allocated in Section D for 221FA04678.
+[INFO] Machine Learning allocated in Section A for 221FA04301.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04653.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04111.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04648.
+[INFO] Deep Learning allocated in Section A for 221FA04229.
+[INFO] Machine Learning allocated in Section B for 221FA04255.
+[INFO] Deep Learning allocated in Section B for 221FA04331.
+[INFO] Deep Learning allocated in Section A for 221FA04482.
+[INFO] Machine Learning allocated in Section C for 221FA04340.
+[INFO] Machine Learning allocated in Section D for 221FA04260.
+[INFO] Machine Learning allocated in Section A for 221fa04705.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04056.
+[INFO] Machine Learning allocated in Section B for 221FA04215.
+[INFO] Machine Learning allocated in Section C for 221FA04588.
+[INFO] Deep Learning allocated in Section B for 221Fa04120.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04085.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04144.
+[INFO] Deep Learning allocated in Section A for 221FA04132.
+[INFO] Deep Learning allocated in Section B for 221FA04428.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04247.
+[INFO] Deep Learning skipped for 221FA04236: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04236.
+[INFO] Deep Learning skipped for 221FA04517: all sections full.
+[INFO] Digital Image Processing allocated in Section A for 221FA04517.
+[INFO] Digital Image Processing allocated in Section A for 221fa04114.
+[INFO] Deep Learning skipped for 221FA04692: all sections full.
+[INFO] Digital Image Processing allocated in Section A for 221FA04692.
+[INFO] Deep Learning skipped for 221FA04452: all sections full.
+[INFO] Digital Image Processing allocated in Section A for 221FA04452.
+[INFO] Deep Learning skipped for 221FA04362: all sections full.
+[INFO] Digital Image Processing allocated in Section A for 221FA04362.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04029.
+[INFO] Deep Learning skipped for 221FA04733: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04733: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04733.
+[INFO] Deep Learning skipped for 221FA04248: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04248: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04248.
+[INFO] Machine Learning allocated in Section D for 221FA04310.
+[INFO] Machine Learning allocated in Section A for 221FA04625.
+[INFO] Deep Learning skipped for 221FA04732: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04732.
+[INFO] Machine Learning allocated in Section B for 221fa04712.
+[INFO] Digital Image Processing skipped for 221FA04308: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04308.
+[INFO] Machine Learning allocated in Section C for 221FA04220.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04093.
+[INFO] Machine Learning allocated in Section D for 221FA04181.
+[INFO] Machine Learning allocated in Section A for 221FA04169.
+[INFO] Deep Learning skipped for 221fa04458: all sections full.
+[INFO] Digital Image Processing skipped for 221fa04458: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221fa04458.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04116.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04156.
+[INFO] Machine Learning allocated in Section B for 221FA04548.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04707.
+[INFO] Machine Learning allocated in Section C for 221FA04161.
+[INFO] Machine Learning allocated in Section D for 221fa04052.
+[INFO] Machine Learning allocated in Section A for 221FA04315.
+[INFO] Machine Learning allocated in Section B for 221FA04273.
+[INFO] Digital Image Processing skipped for 221FA04234: all sections full.
+[INFO] Deep Learning skipped for 221FA04234: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04234.
+[INFO] Advanced Data Structure allocated in Section C for 221fa04265.
+[INFO] Machine Learning allocated in Section C for 221fa04225.
+[INFO] Machine Learning allocated in Section D for 221FA04490.
+[INFO] Machine Learning allocated in Section A for 221FA04353.
+[INFO] Machine Learning allocated in Section B for 221FA04014.
+[INFO] Machine Learning allocated in Section C for 221fa04677.
+[INFO] Deep Learning skipped for 221fa04345: all sections full.
+[INFO] Digital Image Processing skipped for 221fa04345: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04345.
+[INFO] Deep Learning skipped for 221FA04246: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04246: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04246.
+[INFO] Digital Image Processing skipped for 221FA04028: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04028.
+[INFO] Machine Learning allocated in Section D for 221fa04744.
+[INFO] Machine Learning allocated in Section A for 221FA04008.
+[INFO] Digital Image Processing skipped for 221FA04571: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04571.
+[INFO] Machine Learning allocated in Section B for 221FA04046.
+[INFO] Machine Learning allocated in Section C for 221FA04594.
+[INFO] Digital Image Processing skipped for 221FA04375: all sections full.
+[INFO] Deep Learning skipped for 221FA04375: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04375.
+[INFO] Machine Learning allocated in Section D for 221FA04587.
+[INFO] Machine Learning allocated in Section A for 221FA04446.
+[INFO] Machine Learning allocated in Section B for 221FA04214.
+[INFO] Machine Learning allocated in Section C for 221FA04057.
+[INFO] Deep Learning skipped for 221FA04683: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04683: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04683.
+[INFO] Machine Learning allocated in Section D for 221FA04696.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04099.
+[INFO] Deep Learning skipped for 221FA04442: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04442: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04442.
+[INFO] Machine Learning allocated in Section A for 221FA04006.
+[INFO] Machine Learning allocated in Section B for 231LA04006.
+[INFO] Deep Learning skipped for 221FA04658: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04658: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04658.
+[INFO] Machine Learning allocated in Section C for 221FA04738.
+[INFO] Deep Learning skipped for 221FA04697: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04697.
+[INFO] Deep Learning skipped for 221FA04510: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04510: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04510.
+[INFO] Digital Image Processing skipped for 221FA04409: all sections full.
+[INFO] Deep Learning skipped for 221FA04409: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04409.
+[INFO] Machine Learning allocated in Section D for 221FA04650.
+[INFO] Machine Learning skipped for 221FA04318: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04318.
+[INFO] Deep Learning skipped for 221FA04689: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04689.
+[INFO] Machine Learning skipped for 221FA04664: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04664: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04664.
+[INFO] Digital Image Processing skipped for 221FA04351: all sections full.
+[INFO] Machine Learning skipped for 221FA04351: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04351.
+[INFO] Machine Learning skipped for 221FA04146: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04146: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04146.
+[INFO] Machine Learning skipped for 221FA04434: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04434.
+[INFO] Digital Image Processing skipped for 221fa04520: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04520.
+[INFO] Deep Learning skipped for 221FA04276: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04276: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04276.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04529.
+[INFO] Digital Image Processing skipped for 221FA04665: all sections full.
+[INFO] Machine Learning skipped for 221FA04665: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04665.
+[INFO] Deep Learning skipped for 221FA04379: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04379: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04379.
+[INFO] Digital Image Processing skipped for 221FA04663: all sections full.
+[INFO] Deep Learning skipped for 221FA04663: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04663.
+[INFO] Deep Learning skipped for 221FA04694: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04694: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04694.
+[INFO] Machine Learning skipped for 221FA04473: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04473.
+[INFO] Digital Image Processing skipped for 221FA04629: all sections full.
+[INFO] Machine Learning skipped for 221FA04629: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04629.
+[INFO] Machine Learning skipped for 221FA04185: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04185.
+[INFO] Machine Learning skipped for 221FA04270: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04270.
+[INFO] Deep Learning skipped for 221FA04721: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04721: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04721.
+[INFO] Deep Learning skipped for 221FA04693: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04693: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04693.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04399.
+[INFO] Machine Learning skipped for 221fa04191: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221fa04191.
+[INFO] Machine Learning skipped for 221FA04193: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04193.
+[INFO] Deep Learning skipped for 231LA04005: all sections full.
+[INFO] Digital Image Processing skipped for 231LA04005: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 231LA04005.
+[INFO] Deep Learning skipped for 221FA04404: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04404.
+[INFO] Digital Image Processing skipped for 221FA04327: all sections full.
+[INFO] Machine Learning skipped for 221FA04327: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04327.
+[INFO] Machine Learning skipped for 221FA04736: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04736: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04736.
+[INFO] Machine Learning skipped for 221fa04395: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04395.
+[INFO] Machine Learning skipped for 221fa04471: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04471.
+[INFO] Machine Learning skipped for 221FA04018: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04018.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04084.
+[INFO] Deep Learning skipped for 221FA04307: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04307: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04307.
+[INFO] Machine Learning skipped for 221fa04469: all sections full.
+[INFO] Digital Image Processing skipped for 221fa04469: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04469.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04384.
+[INFO] Deep Learning skipped for 221FA04294: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04294.
+[INFO] Digital Image Processing skipped for 221FA04017: all sections full.
+[INFO] Machine Learning skipped for 221FA04017: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04017.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04095.
+[INFO] Machine Learning skipped for 221FA04498: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04498.
+[INFO] Deep Learning skipped for 221FA04126: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04126.
+[INFO] Digital Image Processing skipped for 221FA04518: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04518.
+[INFO] Machine Learning skipped for 221FA04680: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04680: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04680.
+[INFO] Machine Learning skipped for 221FA04564: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04564.
+[INFO] Deep Learning skipped for 221FA04159: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04159: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04159.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04424.
+[INFO] Machine Learning skipped for 221FA04207: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04207.
+[INFO] Machine Learning skipped for 221FA04411: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04411.
+[INFO] Digital Image Processing skipped for 221FA04069: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04069.
+[INFO] Deep Learning skipped for 221FA04148: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04148: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04148.
+[INFO] Machine Learning skipped for 221FA04393: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04393.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04067.
+[INFO] Machine Learning skipped for 221FA04440: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04440.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04079.
+[INFO] Machine Learning skipped for 221fa04010: all sections full.
+[INFO] Digital Image Processing skipped for 221fa04010: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221fa04010.
+[INFO] Machine Learning skipped for 221FA04463: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04463.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04416.
+[INFO] Digital Image Processing skipped for 221FA04555: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04555.
+[INFO] Deep Learning skipped for 221FA04368: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04368: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04368.
+[INFO] Machine Learning skipped for 221FA04539: all sections full.
+[INFO] Advanced Java Programming allocated in Section A for 221FA04539.
+[INFO] Machine Learning skipped for 221FA04293: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04293.
+[INFO] Advanced Java Programming skipped for 221FA04573: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04573: all sections full.
+[INFO] Machine Learning skipped for 221FA04573: all sections full.
+[WARNING] 221FA04573 unallocated — no valid G1 course.
+[INFO] Deep Learning skipped for 221FA04630: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04630.
+[INFO] Machine Learning skipped for 221FA04019: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04019.
+[INFO] Machine Learning skipped for 221FA04628: all sections full.
+[INFO] Advanced Java Programming skipped for 221FA04628: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04628.
+[INFO] Deep Learning skipped for 221FA04339: all sections full.
+[INFO] Digital Image Processing skipped for 221FA04339: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04339.
+[INFO] Advanced Java Programming skipped for 221FA04377: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04377.
+[INFO] Machine Learning skipped for 221FA04205: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04205.
+[INFO] Advanced Data Structure allocated in Section A for 221FA04445.
+[INFO] Machine Learning skipped for 221FA04687: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221FA04687.
+[INFO] Digital Image Processing skipped for 221FA04100: all sections full.
+[INFO] Advanced Java Programming skipped for 221FA04100: all sections full.
+[INFO] Deep Learning skipped for 221FA04100: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04100.
+[INFO] Advanced Java Programming skipped for 221fa04135: all sections full.
+[INFO] Advanced Data Structure allocated in Section A for 221fa04135.
+[INFO] Machine Learning skipped for 221fa04579: all sections full.
+[INFO] Advanced Data Structure allocated in Section B for 221fa04579.
+[INFO] Machine Learning skipped for 221FA04259: all sections full.
+[INFO] Advanced Data Structure allocated in Section C for 221FA04259.
+[INFO] Allocation complete — allocated: 606, unallocated: 1
+[INFO] Step 6b/7 Balancing sections …
+[INFO] Balancing Advanced Data Structure: Section A=60 vs Section C=6
+[INFO] Section balance: moved 221FA04118 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221fa04295 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04237 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04005 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04101 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04102 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221fa04032 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04565 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221fa04081 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221fa04031 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04202 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04421 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04241 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04272 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04155 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04558 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04413 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04041 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04083 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04652 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04267 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04094 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04020 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04070 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221fa04242 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04150 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO] Section balance: moved 221FA04388 from Advanced Data Structure-A to Advanced Data Structure-C
+[INFO]   Moved 27 student(s) during section balancing.
+[INFO] Step 7/7  Generating report → 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\allocation_output.xlsx' …
+[INFO] Allocated sheet written — 606 student(s).
+[INFO] Unallocated sheet written — 1 student(s).
+[INFO] Report saved → C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\allocation_output.xlsx
+[INFO] ==============================================================
+[INFO] ALLOCATION COMPLETE
+[INFO]   Total students   : 607
+[INFO]   Fully allocated  : 606
+[INFO]   Partial (G1 only): 0
+[INFO]   Unallocated      : 1
+[INFO]   Output file      : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-203803-518649bd\allocation_output.xlsx
+[INFO]   Log file         : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\allocation.log
+[INFO] ==============================================================
+[INFO] Section enrolment summary:
+[INFO]   Advanced Data Structure  Section A :  33 /  60
+[INFO]   Advanced Data Structure  Section B :  60 /  60
+[INFO]   Advanced Data Structure  Section C :  33 /  60
+[INFO]   Advanced Java Programming  Section A :  60 /  60
+[INFO]   Deep Learning         Section A :  60 /  60
+[INFO]   Deep Learning         Section B :  60 /  60
+[INFO]   Digital Image Processing  Section A :  60 /  60
+[INFO]   Machine Learning      Section A :  60 /  60
+[INFO]   Machine Learning      Section B :  60 /  60
+[INFO]   Machine Learning      Section C :  60 /  60
+[INFO]   Machine Learning      Section D :  60 /  60
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:38:05] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:38:05] "GET /runs/20260314-203803-518649bd HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:38:05] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:38:12] "GET /download/20260314-203803-518649bd/output HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:48:32] "GET / HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 20:48:32] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -

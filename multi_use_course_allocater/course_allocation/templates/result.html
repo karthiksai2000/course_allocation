@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run {{ run_id }} - Course Allocation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <main class="page">
+    <header class="hero compact">
+      <p class="tag">Run Report</p>
+      <h1>{{ run_id }}</h1>
+      <p class="subtitle">Execution details and downloadable allocation sheets.</p>
+    </header>
+
+    <section class="panel stats">
+      <h2>Allocation Summary</h2>
+      <div class="stats-grid">
+        <article><h3>Total</h3><p>{{ summary.total if summary.total is not none else '-' }}</p></article>
+        <article><h3>Fully Allocated</h3><p>{{ summary.fully_allocated if summary.fully_allocated is not none else '-' }}</p></article>
+        {% if manifest.get('mode', 'dual') != 'single' %}
+        <article><h3>Partial</h3><p>{{ summary.partial if summary.partial is not none else '-' }}</p></article>
+        {% endif %}
+        <article><h3>Unallocated</h3><p>{{ summary.unallocated if summary.unallocated is not none else '-' }}</p></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Artifacts</h2>
+      <div class="actions">
+        {% if output_exists %}
+          <a class="btn-primary" href="{{ url_for('download_artifact', run_id=run_id, artifact='output') }}">Download Output Excel</a>
+        {% endif %}
+        {% if config_exists %}
+          <a class="btn-secondary" href="{{ url_for('download_artifact', run_id=run_id, artifact='config') }}">Download Final Config</a>
+        {% endif %}
+        <a class="btn-secondary" href="{{ url_for('index') }}">New Run</a>
+      </div>
+    </section>
+
+    <section class="panel recent">
+      <h2>Section Enrolment</h2>
+      {% if summary.sections %}
+        <div class="dashboard-tools">
+          <div class="tool-grid">
+            <label>
+              <span>Filter G1</span>
+              <select id="g1Filter">
+                <option value="">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Filter G2</span>
+              <select id="g2Filter">
+                <option value="">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Fill Band</span>
+              <select id="fillFilter">
+                <option value="">All</option>
+                <option value="under50">Under 50%</option>
+                <option value="mid">50% - 99.9%</option>
+                <option value="full">100%</option>
+              </select>
+            </label>
+            <label>
+              <span>Sort By</span>
+              <select id="sortBy">
+                <option value="section">Section Number</option>
+                <option value="enrolledDesc">Enrolled (High to Low)</option>
+                <option value="enrolledAsc">Enrolled (Low to High)</option>
+                <option value="fillDesc">Fill % (High to Low)</option>
+                <option value="fillAsc">Fill % (Low to High)</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="actions tool-actions">
+            <button type="button" class="btn-secondary" id="showAllBtn">Show All</button>
+            <button type="button" class="btn-secondary" id="underfilledBtn">Underfilled Only</button>
+            <button type="button" class="btn-secondary" id="fullBtn">Full Only</button>
+            <button type="button" class="btn-secondary" id="copyVisibleBtn">Copy Visible</button>
+            <button type="button" class="btn-primary" id="downloadVisibleBtn">Download Visible CSV</button>
+          </div>
+
+          <div class="insight-strip" id="insightStrip">
+            <article>
+              <h3>Visible Sections</h3>
+              <p id="visibleSections">0</p>
+            </article>
+            <article>
+              <h3>Average Fill</h3>
+              <p id="avgFill">0.0%</p>
+            </article>
+            <article>
+              <h3>Underfilled</h3>
+              <p id="underfilledCount">0</p>
+            </article>
+            <article>
+              <h3>Full</h3>
+              <p id="fullCount">0</p>
+            </article>
+          </div>
+
+          <div class="chart-grid">
+            <article class="chart-card">
+              <h3>Fill Distribution</h3>
+              <canvas id="fillChart" width="520" height="240" aria-label="Fill distribution chart"></canvas>
+            </article>
+            <article class="chart-card">
+              <h3>G1 Enrolled Load</h3>
+              <canvas id="g1Chart" width="520" height="240" aria-label="G1 enrolled load chart"></canvas>
+            </article>
+          </div>
+        </div>
+
+        <div class="table-wrap dashboard-table-wrap">
+          <table id="summaryTable">
+            <thead>
+              <tr>
+                <th>Primary Course (G1)</th>
+                <th>Secondary Course (G2)</th>
+                <th>Section</th>
+                <th>Enrolled</th>
+                <th>Capacity</th>
+                <th>Available</th>
+                <th>Fill %</th>
+              </tr>
+            </thead>
+            <tbody id="summaryBody">
+              {% for row in summary.sections %}
+                <tr
+                  data-g1="{{ row.g1 }}"
+                  data-g2="{{ row.g2 or '-' }}"
+                  data-section="{{ row.section }}"
+                  data-enrolled="{{ row.enrolled }}"
+                  data-capacity="{{ row.capacity }}"
+                  data-available="{{ row.available }}"
+                  data-fill="{{ row.fill }}"
+                >
+                  <td>{{ row.g1 }}</td>
+                  <td>{{ row.g2 or '-' }}</td>
+                  <td>{{ row.section }}</td>
+                  <td>{{ row.enrolled }}</td>
+                  <td>{{ row.capacity }}</td>
+                  <td>{{ row.available }}</td>
+                  <td>{{ row.fill }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="no-rows" id="noRowsMsg" hidden>No rows match your current filters.</p>
+      {% else %}
+        <p>No section lines were parsed from log output.</p>
+      {% endif %}
+    </section>
+
+    {% if manifest %}
+    <section class="panel meta">
+      <h2>Run Metadata</h2>
+      <ul>
+        <li><strong>Created:</strong> {{ manifest.created }}</li>
+        <li><strong>Mode:</strong> {{ manifest.mode }}</li>
+        <li><strong>Skip Balance:</strong> {{ 'Yes' if manifest.skip_balance else 'No' }}</li>
+        <li><strong>Responses File:</strong> {{ manifest.responses }}</li>
+      </ul>
+    </section>
+    {% endif %}
+  </main>
+
+  <script>
+    (function () {
+      const table = document.getElementById("summaryTable");
+      if (!table) return;
+
+      const body = document.getElementById("summaryBody");
+      const rows = Array.from(body.querySelectorAll("tr"));
+      const g1Filter = document.getElementById("g1Filter");
+      const g2Filter = document.getElementById("g2Filter");
+      const fillFilter = document.getElementById("fillFilter");
+      const sortBy = document.getElementById("sortBy");
+      const noRowsMsg = document.getElementById("noRowsMsg");
+
+      const visibleSections = document.getElementById("visibleSections");
+      const avgFill = document.getElementById("avgFill");
+      const underfilledCount = document.getElementById("underfilledCount");
+      const fullCount = document.getElementById("fullCount");
+      const fillChart = document.getElementById("fillChart");
+      const g1Chart = document.getElementById("g1Chart");
+
+      function asNum(text, fallback = 0) {
+        const n = Number.parseFloat(String(text).replace(/[^0-9.\-]/g, ""));
+        return Number.isFinite(n) ? n : fallback;
+      }
+
+      function fillValue(row) {
+        return asNum(row.dataset.fill, 0);
+      }
+
+      function sectionValue(row) {
+        return asNum(row.dataset.section, 999999);
+      }
+
+      function enrolledValue(row) {
+        return asNum(row.dataset.enrolled, 0);
+      }
+
+      function buildFilterOptions() {
+        const g1Set = new Set();
+        const g2Set = new Set();
+        for (const row of rows) {
+          g1Set.add(row.dataset.g1 || "");
+          g2Set.add(row.dataset.g2 || "-");
+        }
+
+        for (const value of Array.from(g1Set).sort()) {
+          if (!value) continue;
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          g1Filter.appendChild(opt);
+        }
+
+        for (const value of Array.from(g2Set).sort()) {
+          if (!value) continue;
+          const opt = document.createElement("option");
+          opt.value = value;
+          opt.textContent = value;
+          g2Filter.appendChild(opt);
+        }
+      }
+
+      function matchesFillBand(fill, band) {
+        if (!band) return true;
+        if (band === "under50") return fill < 50;
+        if (band === "mid") return fill >= 50 && fill < 100;
+        if (band === "full") return fill >= 100;
+        return true;
+      }
+
+      function sortRows(activeRows) {
+        const mode = sortBy.value;
+        const sorted = [...activeRows];
+        sorted.sort((a, b) => {
+          if (mode === "enrolledDesc") return enrolledValue(b) - enrolledValue(a);
+          if (mode === "enrolledAsc") return enrolledValue(a) - enrolledValue(b);
+          if (mode === "fillDesc") return fillValue(b) - fillValue(a);
+          if (mode === "fillAsc") return fillValue(a) - fillValue(b);
+
+          const sec = sectionValue(a) - sectionValue(b);
+          if (sec !== 0) return sec;
+          const g1 = (a.dataset.g1 || "").localeCompare(b.dataset.g1 || "");
+          if (g1 !== 0) return g1;
+          return (a.dataset.g2 || "").localeCompare(b.dataset.g2 || "");
+        });
+        return sorted;
+      }
+
+      function updateInsights(visibleRows) {
+        visibleSections.textContent = String(visibleRows.length);
+
+        if (!visibleRows.length) {
+          avgFill.textContent = "0.0%";
+          underfilledCount.textContent = "0";
+          fullCount.textContent = "0";
+          return;
+        }
+
+        const fills = visibleRows.map(fillValue);
+        const avg = fills.reduce((a, b) => a + b, 0) / fills.length;
+        const under = fills.filter((v) => v < 100).length;
+        const full = fills.filter((v) => v >= 100).length;
+
+        avgFill.textContent = `${avg.toFixed(1)}%`;
+        underfilledCount.textContent = String(under);
+        fullCount.textContent = String(full);
+      }
+
+      function drawBars(canvas, labels, values, colors, valueSuffix = "") {
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        const ratio = window.devicePixelRatio || 1;
+        const cssWidth = canvas.clientWidth || 520;
+        const cssHeight = canvas.clientHeight || 240;
+        canvas.width = Math.max(1, Math.floor(cssWidth * ratio));
+        canvas.height = Math.max(1, Math.floor(cssHeight * ratio));
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+        ctx.clearRect(0, 0, cssWidth, cssHeight);
+        ctx.fillStyle = "#f8fbff";
+        ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+        const left = 62;
+        const right = cssWidth - 18;
+        const top = 18;
+        const bottom = cssHeight - 34;
+        const width = Math.max(10, right - left);
+        const height = Math.max(10, bottom - top);
+
+        const maxVal = Math.max(1, ...values, 100);
+
+        ctx.strokeStyle = "#c8d7e3";
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i += 1) {
+          const y = top + (height * i) / 4;
+          ctx.beginPath();
+          ctx.moveTo(left, y);
+          ctx.lineTo(right, y);
+          ctx.stroke();
+        }
+
+        ctx.fillStyle = "#3e5f75";
+        ctx.font = "12px Space Grotesk";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        for (let i = 0; i <= 4; i += 1) {
+          const val = maxVal - (maxVal * i) / 4;
+          const y = top + (height * i) / 4;
+          const label = Number.isInteger(val) ? String(Math.round(val)) : val.toFixed(1);
+          ctx.fillText(label, left - 8, y);
+        }
+
+        const count = Math.max(1, labels.length);
+        const slot = width / count;
+        const barWidth = Math.max(14, slot * 0.62);
+
+        for (let i = 0; i < labels.length; i += 1) {
+          const val = values[i] || 0;
+          const x = left + i * slot + (slot - barWidth) / 2;
+          const barHeight = (val / maxVal) * height;
+          const y = bottom - barHeight;
+
+          ctx.fillStyle = colors[i % colors.length];
+          ctx.fillRect(x, y, barWidth, barHeight);
+
+          ctx.fillStyle = "#102a43";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "bottom";
+          ctx.font = "700 12px Space Grotesk";
+          const valLabel = Number.isInteger(val) ? String(val) : val.toFixed(1);
+          ctx.fillText(`${valLabel}${valueSuffix}`, x + barWidth / 2, y - 4);
+
+          ctx.fillStyle = "#3e5f75";
+          ctx.textBaseline = "top";
+          ctx.font = "12px Space Grotesk";
+          const maxChars = 12;
+          const label = labels[i].length > maxChars ? `${labels[i].slice(0, maxChars - 1)}…` : labels[i];
+          ctx.fillText(label, x + barWidth / 2, bottom + 8);
+        }
+      }
+
+      function drawHorizontalBars(canvas, labels, values, colors, valueSuffix = "") {
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        const ratio = window.devicePixelRatio || 1;
+        const cssWidth = canvas.clientWidth || 520;
+        const rowCount = Math.max(1, labels.length);
+        const cssHeight = Math.max(220, 42 + rowCount * 34);
+        canvas.style.height = `${cssHeight}px`;
+        canvas.width = Math.max(1, Math.floor(cssWidth * ratio));
+        canvas.height = Math.max(1, Math.floor(cssHeight * ratio));
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+        ctx.clearRect(0, 0, cssWidth, cssHeight);
+        ctx.fillStyle = "#f8fbff";
+        ctx.fillRect(0, 0, cssWidth, cssHeight);
+
+        const left = 170;
+        const right = cssWidth - 40;
+        const top = 18;
+        const bottom = cssHeight - 16;
+        const width = Math.max(10, right - left);
+        const height = Math.max(10, bottom - top);
+        const barSlot = height / rowCount;
+        const barHeight = Math.min(22, Math.max(12, barSlot * 0.58));
+
+        const maxVal = Math.max(1, ...values);
+
+        // vertical grid
+        ctx.strokeStyle = "#c8d7e3";
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i += 1) {
+          const x = left + (width * i) / 4;
+          ctx.beginPath();
+          ctx.moveTo(x, top);
+          ctx.lineTo(x, bottom);
+          ctx.stroke();
+        }
+
+        // x-axis numeric labels
+        ctx.fillStyle = "#3e5f75";
+        ctx.font = "12px Space Grotesk";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        for (let i = 0; i <= 4; i += 1) {
+          const val = (maxVal * i) / 4;
+          const x = left + (width * i) / 4;
+          const label = Number.isInteger(val) ? String(Math.round(val)) : val.toFixed(1);
+          ctx.fillText(label, x, bottom + 4);
+        }
+
+        for (let i = 0; i < labels.length; i += 1) {
+          const val = values[i] || 0;
+          const yCenter = top + i * barSlot + barSlot / 2;
+          const y = yCenter - barHeight / 2;
+          const w = (val / maxVal) * width;
+
+          ctx.fillStyle = colors[i % colors.length];
+          ctx.fillRect(left, y, w, barHeight);
+
+          // left label
+          ctx.fillStyle = "#102a43";
+          ctx.textAlign = "right";
+          ctx.textBaseline = "middle";
+          ctx.font = "12px Space Grotesk";
+          const maxChars = 22;
+          const label = labels[i].length > maxChars ? `${labels[i].slice(0, maxChars - 1)}…` : labels[i];
+          ctx.fillText(label, left - 8, yCenter);
+
+          // value label
+          ctx.fillStyle = "#102a43";
+          ctx.textAlign = "left";
+          ctx.font = "700 12px Space Grotesk";
+          const valLabel = Number.isInteger(val) ? String(val) : val.toFixed(1);
+          ctx.fillText(`${valLabel}${valueSuffix}`, left + w + 6, yCenter);
+        }
+      }
+
+      function updateCharts(visibleRows) {
+        const fillBands = {
+          "<50": 0,
+          "50-99": 0,
+          "100": 0,
+        };
+        const g1Enrolled = new Map();
+
+        for (const row of visibleRows) {
+          const fill = fillValue(row);
+          const enrolled = enrolledValue(row);
+          const g1 = row.dataset.g1 || "Unknown";
+
+          if (fill < 50) fillBands["<50"] += 1;
+          else if (fill >= 100) fillBands["100"] += 1;
+          else fillBands["50-99"] += 1;
+
+          g1Enrolled.set(g1, (g1Enrolled.get(g1) || 0) + enrolled);
+        }
+
+        drawBars(
+          fillChart,
+          ["Under 50%", "50-99%", "Full"],
+          [fillBands["<50"], fillBands["50-99"], fillBands["100"]],
+          ["#0ea5e9", "#f59e0b", "#16a34a"],
+        );
+
+        const g1Pairs = Array.from(g1Enrolled.entries())
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 6);
+        drawHorizontalBars(
+          g1Chart,
+          g1Pairs.map((x) => x[0]),
+          g1Pairs.map((x) => x[1]),
+          ["#c2410c", "#0f766e", "#2563eb", "#7c3aed", "#0891b2", "#be123c"],
+        );
+      }
+
+      function render() {
+        const g1 = g1Filter.value;
+        const g2 = g2Filter.value;
+        const band = fillFilter.value;
+
+        const activeRows = rows.filter((row) => {
+          const rowG1 = row.dataset.g1 || "";
+          const rowG2 = row.dataset.g2 || "-";
+          const rowFill = fillValue(row);
+
+          const okG1 = !g1 || rowG1 === g1;
+          const okG2 = !g2 || rowG2 === g2;
+          const okBand = matchesFillBand(rowFill, band);
+          return okG1 && okG2 && okBand;
+        });
+
+        const sorted = sortRows(activeRows);
+        for (const row of rows) row.hidden = true;
+        for (const row of sorted) {
+          row.hidden = false;
+          body.appendChild(row);
+        }
+
+        noRowsMsg.hidden = sorted.length !== 0;
+        updateInsights(sorted);
+        updateCharts(sorted);
+      }
+
+      function csvFromVisible() {
+        const headers = [
+          "Primary Course (G1)",
+          "Secondary Course (G2)",
+          "Section",
+          "Enrolled",
+          "Capacity",
+          "Available",
+          "Fill %",
+        ];
+
+        const visible = rows.filter((r) => !r.hidden);
+        const lines = [headers.join(",")];
+        for (const row of visible) {
+          const vals = [
+            row.dataset.g1 || "",
+            row.dataset.g2 || "",
+            row.dataset.section || "",
+            row.dataset.enrolled || "",
+            row.dataset.capacity || "",
+            row.dataset.available || "",
+            row.dataset.fill || "",
+          ].map((v) => `"${String(v).replace(/"/g, '""')}"`);
+          lines.push(vals.join(","));
+        }
+        return lines.join("\n");
+      }
+
+      function copyVisible() {
+        const csv = csvFromVisible();
+        navigator.clipboard.writeText(csv).then(() => {
+          const btn = document.getElementById("copyVisibleBtn");
+          const old = btn.textContent;
+          btn.textContent = "Copied";
+          setTimeout(() => { btn.textContent = old; }, 1200);
+        });
+      }
+
+      function downloadVisible() {
+        const csv = csvFromVisible();
+        const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `{{ run_id }}-visible-summary.csv`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      buildFilterOptions();
+      render();
+
+      g1Filter.addEventListener("change", render);
+      g2Filter.addEventListener("change", render);
+      fillFilter.addEventListener("change", render);
+      sortBy.addEventListener("change", render);
+
+      document.getElementById("showAllBtn").addEventListener("click", () => {
+        g1Filter.value = "";
+        g2Filter.value = "";
+        fillFilter.value = "";
+        render();
+      });
+
+      document.getElementById("underfilledBtn").addEventListener("click", () => {
+        fillFilter.value = "mid";
+        render();
+      });
+
+      document.getElementById("fullBtn").addEventListener("click", () => {
+        fillFilter.value = "full";
+        render();
+      });
+
+      document.getElementById("copyVisibleBtn").addEventListener("click", copyVisible);
+      document.getElementById("downloadVisibleBtn").addEventListener("click", downloadVisible);
+      window.addEventListener("resize", render);
+    })();
+  </script>
+</body>
+</html>

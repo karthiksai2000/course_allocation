@@ -1,0 +1,344 @@
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\course_config.xlsx' …
+[INFO] Loaded 8 course(s) from config.
+[INFO] Step 2/7  Loading student responses from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\ex1.xlsx' …
+[INFO] Loaded 100 response row(s) from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\ex1.xlsx'.
+[INFO] Step 3/7  Cleaning data (dedup, CGPA normalisation) …
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] CGPA converted: 89% → 8.9
+[INFO] CGPA converted: 89 → 8.9
+[INFO] Processed 100 unique student(s).
+[INFO] Step 4/7  Validating course preferences …
+[INFO] Deep Learning skipped for 231FA04121: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04133: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04140: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04148: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04151: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04175: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04186: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04187: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04195: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04123: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04139: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04141: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04149: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04150: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04162: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04176: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04191: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04103: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04105: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04106: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04118: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04119: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04127: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04130: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04131: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04132: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04137: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04138: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04147: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04152: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04153: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04156: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04157: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04158: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04161: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04164: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04165: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04170: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04199: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04100: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04160: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04108: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04120: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04124: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04143: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04166: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04168: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04173: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04184: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04185: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Deep Learning skipped for 231FA04188: missing prerequisite(s) {'Machine Learning'}.
+[INFO] Clean student data saved to 'clean_students.json'.
+[INFO] Step 5/7  Initialising section manager …
+[INFO] Step 6/7  Running course allocation …
+[INFO] Distribution mode for Artificial Intelligence: balanced (expected demand=33, sections=2, capacity/section=35)
+[INFO] Distribution mode for Deep Learning: single (expected demand=10, sections=1, capacity/section=30)
+[INFO] Distribution mode for Cloud Computing: single (expected demand=25, sections=1, capacity/section=40)
+[INFO] Distribution mode for Data Engineering: single (expected demand=32, sections=1, capacity/section=35)
+[INFO] Distribution mode for Internet of Things: balanced (expected demand=24, sections=2, capacity/section=30)
+[INFO] Distribution mode for Blockchain: single (expected demand=24, sections=1, capacity/section=30)
+[INFO] Distribution mode for Cyber Security: single (expected demand=32, sections=1, capacity/section=30)
+[INFO] Distribution mode for AR/VR: single (expected demand=20, sections=1, capacity/section=30)
+[INFO] Artificial Intelligence allocated in Section A for 231FA04101.
+[INFO] Cyber Security allocated in Section A for 231FA04101 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04102.
+[INFO] Blockchain allocated in Section A for 231FA04102 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04104.
+[INFO] AR/VR allocated in Section A for 231FA04104 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04109.
+[INFO] Blockchain allocated in Section A for 231FA04109 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04110.
+[INFO] Blockchain allocated in Section A for 231FA04110 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04115.
+[INFO] Internet of Things allocated in Section B for 231FA04115 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04121.
+[INFO] AR/VR allocated in Section A for 231FA04121 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04133.
+[INFO] Internet of Things allocated in Section A for 231FA04133 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04135.
+[INFO] Internet of Things allocated in Section A for 231FA04135 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04140.
+[INFO] Internet of Things allocated in Section B for 231FA04140 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04148.
+[INFO] Cyber Security allocated in Section A for 231FA04148 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04151.
+[INFO] Cyber Security allocated in Section A for 231FA04151 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04175.
+[INFO] Blockchain allocated in Section A for 231FA04175 (demand-aware fallback).
+[INFO] Data Engineering allocated in Section A for 231FA04186.
+[INFO] Blockchain allocated in Section A for 231FA04186 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04187.
+[INFO] Internet of Things allocated in Section A for 231FA04187 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04194.
+[INFO] AR/VR allocated in Section A for 231FA04194 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04195.
+[INFO] AR/VR allocated in Section A for 231FA04195 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04114.
+[INFO] Cyber Security allocated in Section A for 231FA04114 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04122.
+[INFO] Blockchain allocated in Section A for 231FA04122 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04123.
+[INFO] Internet of Things allocated in Section A for 231FA04123 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04128.
+[INFO] Internet of Things allocated in Section A for 231FA04128 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04134.
+[INFO] Internet of Things allocated in Section A for 231FA04134 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04139.
+[INFO] Blockchain allocated in Section A for 231FA04139 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04141.
+[INFO] Internet of Things allocated in Section A for 231FA04141 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04149.
+[INFO] AR/VR allocated in Section A for 231FA04149 (demand-aware fallback).
+[INFO] Cloud Computing allocated in Section A for 231FA04150.
+[INFO] AR/VR allocated in Section A for 231FA04150 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04162.
+[INFO] Internet of Things allocated in Section A for 231FA04162 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04176.
+[INFO] Internet of Things allocated in Section A for 231FA04176 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04190.
+[INFO] AR/VR allocated in Section A for 231FA04190 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04191.
+[INFO] Blockchain allocated in Section A for 231FA04191 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04192.
+[INFO] Blockchain allocated in Section A for 231FA04192 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04197.
+[INFO] Cyber Security allocated in Section A for 231FA04197 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04103.
+[INFO] Cyber Security allocated in Section A for 231FA04103 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04105.
+[INFO] Blockchain allocated in Section A for 231FA04105 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04106.
+[INFO] Cyber Security allocated in Section A for 231FA04106 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04116.
+[INFO] Internet of Things allocated in Section A for 231FA04116 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04117.
+[INFO] Cyber Security allocated in Section A for 231FA04117 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04118.
+[INFO] Blockchain allocated in Section A for 231FA04118 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04119.
+[INFO] Cyber Security allocated in Section A for 231FA04119 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04126.
+[INFO] Cyber Security allocated in Section A for 231FA04126 (demand-aware fallback).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04127.
+[INFO] Internet of Things allocated in Section A for 231FA04127 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04129.
+[INFO] AR/VR allocated in Section A for 231FA04129 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04130.
+[INFO] AR/VR allocated in Section A for 231FA04130 (demand-aware fallback).
+[INFO] Data Engineering allocated in Section A for 231FA04131.
+[INFO] AR/VR allocated in Section A for 231FA04131 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04132.
+[INFO] Blockchain allocated in Section A for 231FA04132 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04136.
+[INFO] Blockchain allocated in Section A for 231FA04136 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04137.
+[INFO] Cyber Security allocated in Section A for 231FA04137 (demand-aware fallback).
+[INFO] Data Engineering allocated in Section A for 231FA04138.
+[INFO] Blockchain allocated in Section A for 231FA04138 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04144.
+[INFO] Blockchain allocated in Section A for 231FA04144 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04145.
+[INFO] Blockchain allocated in Section A for 231FA04145 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04147.
+[INFO] Cyber Security allocated in Section A for 231FA04147 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04152.
+[INFO] Internet of Things allocated in Section A for 231FA04152 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04153.
+[INFO] Internet of Things allocated in Section A for 231FA04153 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04154.
+[INFO] AR/VR allocated in Section A for 231FA04154 (demand-aware fallback).
+[INFO] Cloud Computing allocated in Section A for 231FA04155.
+[INFO] Cyber Security allocated in Section A for 231FA04155 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04156.
+[INFO] AR/VR allocated in Section A for 231FA04156 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04157.
+[INFO] Cyber Security allocated in Section A for 231FA04157 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04158.
+[INFO] Internet of Things allocated in Section B for 231FA04158 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04161.
+[INFO] Internet of Things allocated in Section A for 231FA04161 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04163.
+[INFO] AR/VR allocated in Section A for 231FA04163 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04164.
+[INFO] Blockchain allocated in Section A for 231FA04164 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04165.
+[INFO] Blockchain allocated in Section A for 231FA04165 (demand-aware fallback).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04170.
+[INFO] Cyber Security allocated in Section A for 231FA04170 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04171.
+[INFO] Cyber Security allocated in Section A for 231FA04171 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04177.
+[INFO] Cyber Security allocated in Section A for 231FA04177 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04178.
+[INFO] AR/VR allocated in Section A for 231FA04178 (demand-aware fallback).
+[INFO] Data Engineering allocated in Section A for 231FA04179.
+[INFO] Blockchain allocated in Section A for 231FA04179 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04180.
+[INFO] Cyber Security allocated in Section A for 231FA04180 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04181.
+[INFO] Blockchain allocated in Section A for 231FA04181 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04189.
+[INFO] Internet of Things allocated in Section A for 231FA04189 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04193.
+[INFO] Cyber Security allocated in Section A for 231FA04193 (demand-aware fallback).
+[INFO] Data Engineering allocated in Section A for 231FA04198.
+[INFO] Internet of Things allocated in Section A for 231FA04198 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04199.
+[INFO] AR/VR allocated in Section A for 231FA04199 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04100.
+[INFO] Cyber Security allocated in Section A for 231FA04100 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04107.
+[INFO] AR/VR allocated in Section A for 231FA04107 (demand-aware fallback).
+[INFO] Cloud Computing allocated in Section A for 231FA04112.
+[INFO] AR/VR allocated in Section A for 231FA04112 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04125.
+[INFO] Internet of Things allocated in Section A for 231FA04125 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04142.
+[INFO] Cyber Security allocated in Section A for 231FA04142 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04146.
+[INFO] Cyber Security allocated in Section A for 231FA04146 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04160.
+[INFO] AR/VR allocated in Section A for 231FA04160 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04167.
+[INFO] Internet of Things allocated in Section A for 231FA04167 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04169.
+[INFO] Blockchain allocated in Section A for 231FA04169 (matched primary).
+[INFO] Deep Learning allocated in Section A for 231FA04172.
+[INFO] Cyber Security allocated in Section A for 231FA04172 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04174.
+[INFO] AR/VR allocated in Section A for 231FA04174 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04183.
+[INFO] Cyber Security allocated in Section A for 231FA04183 (matched primary).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04108.
+[INFO] AR/VR allocated in Section A for 231FA04108 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04111.
+[INFO] Cyber Security allocated in Section A for 231FA04111 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04113.
+[INFO] Internet of Things allocated in Section A for 231FA04113 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04120.
+[INFO] Cyber Security allocated in Section A for 231FA04120 (demand-aware fallback).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04124.
+[INFO] Blockchain allocated in Section A for 231FA04124 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04143.
+[INFO] Cyber Security allocated in Section A for 231FA04143 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04159.
+[INFO] Cyber Security allocated in Section A for 231FA04159 (demand-aware fallback).
+[INFO] Artificial Intelligence allocated in Section A for 231FA04166.
+[INFO] Blockchain allocated in Section A for 231FA04166 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04168.
+[INFO] Cyber Security allocated in Section A for 231FA04168 (matched primary).
+[INFO] Cloud Computing allocated in Section A for 231FA04173.
+[INFO] Cyber Security allocated in Section A for 231FA04173 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04182.
+[INFO] Internet of Things allocated in Section A for 231FA04182 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04184.
+[INFO] Cyber Security skipped for 231FA04184: all sections full.
+[INFO] Internet of Things allocated in Section A for 231FA04184 (matched primary).
+[INFO] Artificial Intelligence allocated in Section B for 231FA04185.
+[INFO] Internet of Things allocated in Section B for 231FA04185 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04188.
+[INFO] Blockchain allocated in Section A for 231FA04188 (matched primary).
+[INFO] Data Engineering allocated in Section A for 231FA04196.
+[INFO] Cyber Security skipped for 231FA04196: all sections full.
+[INFO] AR/VR allocated in Section A for 231FA04196 (matched primary).
+[INFO] Allocation complete — allocated: 100, unallocated: 0
+[INFO] Step 6b/7 Balancing sections …
+[INFO] Balancing Artificial Intelligence: Section A=24 vs Section B=9
+[INFO]   Sections are balanced — no moves required.
+[INFO] Step 7/7  Generating report → 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\allocation_output.xlsx' …
+[INFO] Allocated sheet written — 100 student(s).
+[INFO] Unallocated sheet written — 0 student(s).
+[INFO] Report saved → C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\allocation_output.xlsx
+[INFO] ==============================================================
+[INFO] ALLOCATION COMPLETE
+[INFO]   Total students   : 100
+[INFO]   Fully allocated  : 100
+[INFO]   Partial (G1 only): 0
+[INFO]   Unallocated      : 0
+[INFO]   Output file      : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-154734-aa36016b\allocation_output.xlsx
+[INFO]   Log file         : C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\allocation.log
+[INFO] ==============================================================
+[INFO] Section enrolment summary:
+[INFO]   AR/VR                 Section A :  21 /  30
+[INFO]   Artificial Intelligence  Section A :  24 /  35
+[INFO]   Artificial Intelligence  Section B :   9 /  35
+[INFO]   Blockchain            Section A :  24 /  30
+[INFO]   Cloud Computing       Section A :  25 /  40
+[INFO]   Cyber Security        Section A :  30 /  30
+[INFO]   Data Engineering      Section A :  32 /  35
+[INFO]   Deep Learning         Section A :  10 /  30
+[INFO]   Internet of Things    Section A :  16 /  30
+[INFO]   Internet of Things    Section B :   9 /  30
+[INFO] 127.0.0.1 - - [14/Mar/2026 15:47:35] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 15:47:35] "GET /runs/20260314-154734-aa36016b HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 15:47:35] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 15:47:38] "GET /download/20260314-154734-aa36016b/output HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:34:27] "GET / HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:34:27] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO] ==============================================================
+[INFO]   Student Course Allocation System
+[INFO] ==============================================================
+[INFO] Step 1/7  Loading course configuration from 'C:\Users\thish\OneDrive\Documents\GitHub\course_allocation\web_runs\20260314-184848-913e8d8f\course_config.xlsx' …
+[WARNING] Course 'Deep Learning' has invalid group ''; expected G1 or G2 — skipped.
+[WARNING] Course 'Digital Image Processing' has invalid group ''; expected G1 or G2 — skipped.
+[WARNING] Course 'Machine Learning' has invalid group ''; expected G1 or G2 — skipped.
+[WARNING] Course 'Advanced Java Programming' has invalid group ''; expected G1 or G2 — skipped.
+[WARNING] Course 'Advanced Data Structure' has invalid group ''; expected G1 or G2 — skipped.
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:48:48] "[32mPOST /run HTTP/1.1[0m" 302 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:48:48] "GET / HTTP/1.1" 200 -
+[INFO] 127.0.0.1 - - [14/Mar/2026 18:48:48] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+[INFO]  * Detected change in 'C:\\Users\\thish\\OneDrive\\Documents\\GitHub\\course_allocation\\input_processor.py', reloading
