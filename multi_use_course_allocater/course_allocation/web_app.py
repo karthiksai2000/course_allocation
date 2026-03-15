@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from flask_cors import CORS
 import json
 import re
 from datetime import datetime
@@ -22,7 +22,7 @@ ALLOWED_EXTENSIONS = {".xlsx", ".xlsm", ".xls"}
 app = Flask(__name__)
 app.secret_key = "course-allocation-web-ui"
 
-
+CORS(app)
 def _allowed_file(filename: str) -> bool:
     return Path(filename).suffix.lower() in ALLOWED_EXTENSIONS
 
