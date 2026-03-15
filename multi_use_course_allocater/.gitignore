@@ -1,0 +1,5 @@
+web_runs/
+__pycache__/
+*.log
+*.xlsx
+desktop.ini
