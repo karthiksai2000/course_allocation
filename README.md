@@ -2,404 +2,69 @@
 
 # Life Skill Allocation System
 
-## Overview
-
-The **Life Skill Allocation System** is designed to automatically assign students to life skill courses based on:
-
-* Student preferences
-* Academic merit (CGPA)
-* Attendance
-* Section fairness constraints
-* Skill capacity limits
-
-The system reads student responses from an Excel file and produces allocation results in multiple structured reports.
-
-The allocation ensures fairness by prioritizing **top students within each section** rather than only global toppers.
+Life Skill Allocation + Course Allocation — one repo, two engines, zero excuses.
 
 ---
 
-# Input Data
-
-The system expects an Excel file containing student responses collected through a form.
-
-### Required Columns
-
-The system automatically detects required columns using keyword matching.
-
-| Required Field     | Detection Keyword     |
-| ------------------ | --------------------- |
-| Student Name       | `student`             |
-| Register Number    | `reg`                 |
-| CGPA               | `cgpa`                |
-| Section            | `section`             |
-| Preference Columns | `Row1, Row2, Row3...` |
-
-Example input structure:
-
-| Student Name | Register No | CGPA | Section | Row1        | Row2        | Row3     |
-| ------------ | ----------- | ---- | ------- | ----------- | ----------- | -------- |
-| Rahul        | 21BCE001    | 9.1  | 1       | Photography | Cooking     | Yoga     |
-| Arjun        | 21BCE002    | 8.8  | 1       | Cooking     | Photography | Painting |
+## What lives here
+- Life Skill allocator (slot/skill fairness) — FastAPI backend in [multi_use_course_allocater/backend](multi_use_course_allocater/backend) with a Vite frontend.
+- Google Form course allocator (G1/G2) — CLI and Flask UI in [multi_use_course_allocater/course_allocation](multi_use_course_allocater/course_allocation).
+- Frontend shell for the life-skill API in [multi_use_course_allocater/frontend](multi_use_course_allocater/frontend).
 
 ---
 
-# Automatic Column Detection
+## Quick start: Life Skill API (FastAPI)
+- Install deps: `pip install -r multi_use_course_allocater/backend/requirements.txt`
+- Run API (from the backend folder): `uvicorn backend_api:app --reload --port 8000`
+- Health check: `http://localhost:8000/health`
+- Sample config: [multi_use_course_allocater/backend/sample_config.json](multi_use_course_allocater/backend/sample_config.json)
 
-The system automatically identifies columns using flexible keyword matching.
+**Fire a run**
+- `curl -X POST http://localhost:8000/run-allocation -F "file=@responses.xlsx" -F "config=$(cat sample_config.json)"`
+- Or CLI: `python allocate.py --input responses.xlsx --config-json sample_config.json --output-dir output`
+- Validate outputs: `python validate_outputs.py --config-json sample_config.json`
 
-### Student Column Detection
-
-```python
-_first_matching_column(columns, keyword)
-```
-
-Example:
-
-```
-Student Name
-Student
-Student_Name
-```
-
-All will be detected.
+**Frontend (optional)**
+- `cd multi_use_course_allocater/frontend && npm install && npm run dev`
+- Frontend expects API at `http://localhost:8000`; Vite serves at `http://localhost:5173`.
 
 ---
 
-### Preference Column Ordering
-
-Preference columns are detected and sorted using:
-
-```
-Row1
-Row2
-Row3
-```
-
-Sorting logic extracts the number from the column name.
-
-Example:
-
-| Column | Order |
-| ------ | ----- |
-| Row1   | 1     |
-| Row2   | 2     |
-| Row10  | 10    |
+## Quick start: Course Allocation (G1/G2 Google Form flow)
+- Install deps: `pip install -r multi_use_course_allocater/course_allocation/requirements.txt`
+- Default CLI: `python main.py --responses responses.xlsx --config course_config.xlsx --output allocation_output.xlsx --mode auto`
+- Generate sample data: `python create_sample_data.py`
+- Web UI: `python web_app.py` then open `http://127.0.0.1:5000` (uploads responses/config/overrides, downloads reports per run).
 
 ---
 
-# Configuration Parameters
-
-Allocation rules are controlled through a JSON configuration.
-
-Example configuration:
-
-```json
-{
- "xWeight": 0.3,
- "sectionSkillLimit": 4,
- "sectionSlot": {
-   "1": "Slot1",
-   "2": "Slot1",
-   "3": "Slot2"
- },
- "skillCapacity": {
-   "Photography": 70,
-   "Cooking": 70,
-   "Yoga": 70
- }
-}
-```
+## Data expectations
+- Life Skill API input Excel must include name, reg no, CGPA, section, and preference columns containing “Row”. Column names are detected by keywords.
+- Life Skill config requires `xWeight`, `sectionSkillLimit`, `sectionSlot`, `skillCapacity` (see sample config). Merit score uses $Score = xWeight \times Attendance + (1 - xWeight) \times CGPA$.
+- Course Allocation responses follow the Google Form layout described in [multi_use_course_allocater/course_allocation/README.md](multi_use_course_allocater/course_allocation/README.md); config.xlsx lists Course, Group (G1/G2), Sections, Capacity, Prerequisites.
 
 ---
 
-# Allocation Score Formula
-
-Student merit score is calculated using:
-
-```
-Score = xWeight * Attendance + (1 - xWeight) * CGPA
-```
-
-Example:
-
-```
-xWeight = 0.3
-Attendance = 8
-CGPA = 9
-Score = 0.3 × 8 + 0.7 × 9 = 8.7
-```
-
-Students are ranked based on:
-
-1. Score
-2. CGPA
-3. Attendance
-4. Register Number
+## Outputs
+- Life Skill API: student_wise.xlsx, section_wise.xlsx, skill_wise.xlsx, slot_wise.xlsx, capacity_dashboard.xlsx, allocation_log.txt, duplicate_students_removed.txt, invalid_cgpa_rows.txt.
+- Course Allocation: allocation_output.xlsx with per-section sheets, Course Summary, Unallocated Students; run artifacts live under `multi_use_course_allocater/course_allocation/web_runs/`.
 
 ---
 
-# Constraints Considered
-
-The allocation algorithm enforces the following constraints.
-
----
-
-## 1. Section to Slot Mapping
-
-Each section belongs to exactly one slot.
-
-Example:
-
-```
-Section 1 → Slot1
-Section 2 → Slot1
-Section 3 → Slot2
-```
-
-Students compete only within their assigned slot.
+## Design highlights
+- Section-fair allocation: round-robin within sections; respects per-slot capacity and per-section skill limits ([multi_use_course_allocater/backend/allocate.py](multi_use_course_allocater/backend/allocate.py)).
+- Dynamic config: config must ride along with every API call—no stale server state.
+- Demand-driven sections: new sections open only when earlier ones fill (see SectionManager in [multi_use_course_allocater/course_allocation/section_manager.py](multi_use_course_allocater/course_allocation/section_manager.py)).
+- Admin overrides: drop an overrides Excel to surgically move students before report generation ([multi_use_course_allocater/course_allocation/main.py](multi_use_course_allocater/course_allocation/main.py)).
+- Rich reports: Excel styling, per-combo summaries, and unallocated reasons ([multi_use_course_allocater/course_allocation/report_generator.py](multi_use_course_allocater/course_allocation/report_generator.py)).
 
 ---
 
-## 2. Skill Capacity Constraint
-
-Each skill has a maximum capacity per slot.
-
-Example:
-
-```
-Cooking capacity = 70
-Photography capacity = 70
-```
-
-Allocation cannot exceed this capacity.
-
----
-
-## 3. Section Skill Limit
-
-To maintain fairness across sections, a maximum number of students from a section can enroll in the same skill.
-
-Example:
-
-```
-Section skill limit = 4
-```
-
-If a slot contains 5 sections:
-
-```
-Max students per skill
-= 4 × 5
-= 20
-```
-
----
-
-## 4. Section Fairness Constraint
-
-Students are ranked **within their own section**.
-
-Example:
-
-Section 2:
-
-| Rank | Score | Preference |
-| ---- | ----- | ---------- |
-| 1    | 9.2   | Cooking    |
-| 2    | 8.9   | Cooking    |
-| 3    | 8.7   | Cooking    |
-| 4    | 8.5   | Cooking    |
-
-These top 4 students will be allocated before lower ranked students from the same section.
-
-This ensures:
-
-```
-Top students of each section get priority
-```
-
-rather than only global toppers.
-
----
-
-## 5. Preference Order Constraint
-
-Student preferences are respected in order.
-
-```
-Row1 → Row2 → Row3
-```
-
-The allocator attempts:
-
-1. First preference
-2. Second preference
-3. Third preference
-
----
-
-## 6. Fallback Allocation
-
-If all preferences are full or violate constraints, the system assigns the **least filled skill** within the slot.
-
-This prevents allocation failures.
-
----
-
-## 7. Duplicate Student Handling
-
-If duplicate register numbers appear:
-
-```
-latest submission is retained
-```
-
-Duplicates are logged separately.
-
----
-
-## 8. Invalid Data Handling
-
-The system removes rows with:
-
-* Missing CGPA
-* Invalid CGPA values
-* Missing section
-* Missing register number
-
-All removed rows are logged.
-
----
-
-# Allocation Algorithm
-
-The allocator uses a **section-wise round-robin allocation strategy**.
-
-### Step 1
-
-Students are grouped by section.
-
-### Step 2
-
-Students inside each section are ranked by merit.
-
-### Step 3
-
-Allocation runs in rounds:
-
-```
-Round 1 → Topper of each section
-Round 2 → 2nd ranked student
-Round 3 → 3rd ranked student
-```
-
-This ensures fair distribution across sections.
-
----
-
-# Output Files
-
-The system generates several reports.
-
-### Student Wise Allocation
-
-```
-student_wise.xlsx
-```
-
-| RegNo | Name | Section | Slot | Skill |
-| ----- | ---- | ------- | ---- | ----- |
-
----
-
-### Section Wise Allocation
-
-```
-section_wise.xlsx
-```
-
-Sorted by section.
-
----
-
-### Skill Wise Allocation
-
-```
-skill_wise.xlsx
-```
-
-Sorted by skill.
-
----
-
-### Slot Wise Allocation
-
-```
-slot_wise.xlsx
-```
-
-Sorted by slot.
-
----
-
-### Capacity Dashboard
-
-```
-capacity_dashboard.xlsx
-```
-
-| Slot | Skill | Allocated | Capacity |
-
----
-
-### Logs
-
-```
-allocation_log.txt
-duplicate_students_removed.txt
-invalid_cgpa_rows.txt
-```
-
----
-
-# System Workflow
-
-1. Read Excel responses.
-2. Normalize and validate data.
-3. Calculate student scores.
-4. Rank students within each section.
-5. Allocate skills based on preferences and constraints.
-6. Generate reports and logs.
-
----
-
-# Technologies Used
-
-* Python
-* Pandas
-* Excel processing
-* JSON configuration
-
----
-
-# Future Extensions
-
-Possible improvements:
-
-* Web based dashboard
-* API integration
-* React admin interface
-* Visualization of allocation statistics
-* Dynamic configuration interface
-
----
-
-# Summary
-
-The Life Skill Allocation System ensures:
-
-* Fair distribution across sections
-* Preference based allocation
+## Troubleshooting fast
+- “Missing config keys” or “preference columns not found”: your JSON or Excel headers don’t match the expected keywords—check the sample files.
+- “No skills available for section …”: capacity or sectionSkillLimit too low for that slot; raise limits or reduce sections in config.
+- Web UI uploads failing: ensure Excel file extensions are .xlsx/.xlsm/.xls and keep API at `http://localhost:8000`.
+- Vite frontend cannot reach API: adjust CORS or change `vite.config.js` proxy to your backend port.
 * Skill capacity enforcement
 * Robust handling of invalid data
 
