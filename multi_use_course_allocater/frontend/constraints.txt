@@ -1,0 +1,15 @@
+Here’s how the frontend pulls data automatically:
+
+- Upload + config: In App.jsx, `handleFileChange` reads the uploaded Excel with `XLSX`. It auto-detects preference columns (Row1/Row2/…) to build the course list and detects the Section column to build section→slot mappings. It then sets `showConfig` so the editable forms appear.
+
+- Request to backend: When you click “Run Allocation,” `runAllocation` sends a `FormData` POST to `http://localhost:8000/run-allocation`, attaching the Excel file and the JSON config (`xWeight`, `sectionSkillLimit`, section→slot mapping, skill capacities).
+
+- Results handling: The response JSON (summary, studentWise, sectionWise, skillWise, slotWise, capacityDashboard, logs) is stored in `result` state. After success, we flip to the results view.
+
+- Displaying results: The separate results page lives in Results.jsx. It receives `result` and renders tabs for Summary/Students/Sections/Skills/Slots/Capacity/Logs, including the download buttons and searches. Logs and students have client-side search filters.
+
+- Auto section distribution: When sections are auto-detected, `distributeSections` in App.jsx spreads sections evenly across the selected number of slots (e.g., 22 sections over 3 slots → 7/7/8). Changing “Number of Slots” re-runs this distribution.
+
+- Unallocated info: The backend includes `logs.unallocatedOverall`, which you can download via the “Download Unallocated” button on the Summary tab (wired in Results).
+
+If you want a quick pointer to the fetch call: look at `runAllocation` in App.jsx; for the rendering, see the tabs and tables in [frontend
