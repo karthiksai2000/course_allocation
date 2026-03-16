@@ -79,6 +79,7 @@ function App() {
   const [showConfig, setShowConfig] = useState(false);
   const [showResultsPage, setShowResultsPage] = useState(false);
   const [selectedModule, setSelectedModule] = useState(null);
+  const [inspecting, setInspecting] = useState(false);
 
   const config = useMemo(() => {
     const sectionSlot = Object.fromEntries(sectionSlots);
@@ -111,6 +112,41 @@ function App() {
     );
   };
 
+  const applyInspectionData = (data) => {
+    const detectedSkills = data.skills || [];
+    if (detectedSkills.length) {
+      setSkillCapacities((prev) => {
+        const prevMap = new Map(prev);
+        return detectedSkills.map((skill) => [skill, prevMap.get(skill) ?? 70]);
+      });
+    }
+
+    const detectedSections = data.sections || [];
+    if (detectedSections.length) {
+      const totalSlots = Math.max(1, Number(slotCount) || 1);
+      const slotNames = Array.from({ length: totalSlots }, (_, i) => `Slot${i + 1}`);
+      setSectionSlots(distributeSections(detectedSections, slotNames));
+      setFetchedSections(detectedSections);
+    }
+  };
+
+  const inspectExcel = async (picked) => {
+    const formData = new FormData();
+    formData.append("file", picked);
+
+    const response = await fetch(`${LIFESKILL_API_URL}/inspect-excel`, {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.detail || "Failed to inspect Excel");
+    }
+
+    return data;
+  };
+
   const handleFileChange = async (event) => {
     const picked = event.target.files?.[0] || null;
     setFile(picked);
@@ -120,37 +156,31 @@ function App() {
     setSelectedModule("lifeskill");
 
     try {
-      const formData = new FormData();
-      formData.append("file", picked);
-
-      const response = await fetch(`${LIFESKILL_API_URL}/inspect-excel`, {
-        method: "POST",
-        body: formData,
-      });
-
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.detail || "Failed to inspect Excel");
-      }
-
-      const detectedSkills = data.skills || [];
-      if (detectedSkills.length) {
-        setSkillCapacities((prev) => {
-          const prevMap = new Map(prev);
-          return detectedSkills.map((skill) => [skill, prevMap.get(skill) ?? 70]);
-        });
-      }
-
-      const detectedSections = data.sections || [];
-      if (detectedSections.length) {
-        const totalSlots = Math.max(1, Number(slotCount) || 1);
-        const slotNames = Array.from({ length: totalSlots }, (_, i) => `Slot${i + 1}`);
-        setSectionSlots(distributeSections(detectedSections, slotNames));
-        setFetchedSections(detectedSections);
-      }
+      setInspecting(true);
+      const data = await inspectExcel(picked);
+      applyInspectionData(data);
     } catch (parseErr) {
       console.error("Inspect failed", parseErr);
       setError(parseErr.message || "Could not inspect Excel file");
+    } finally {
+      setInspecting(false);
+    }
+  };
+
+  const handleFetchSkills = async () => {
+    if (!file) {
+      setError("Please upload an Excel file before fetching skills.");
+      return;
+    }
+    setError("");
+    try {
+      setInspecting(true);
+      const data = await inspectExcel(file);
+      applyInspectionData(data);
+    } catch (err) {
+      setError(err.message || "Could not fetch skills from backend");
+    } finally {
+      setInspecting(false);
     }
   };
 
@@ -371,11 +401,16 @@ function App() {
               accept=".xlsx,.xls"
               onChange={handleFileChange}
             />
-            {!showConfig && (
-              <div className="row-actions" style={{ justifyContent: "flex-start", marginTop: 10 }}>
-                <button className="ghost" onClick={() => setShowConfig(true)}>Show default courses & slots</button>
-              </div>
-            )}
+            <div className="row-actions" style={{ justifyContent: "flex-start", gap: 10, marginTop: 10 }}>
+              <button onClick={handleFetchSkills} disabled={!file || inspecting}>
+                {inspecting ? "Fetching..." : "Fetch skills from backend"}
+              </button>
+              {!showConfig && (
+                <button className="ghost" onClick={() => setShowConfig(true)}>
+                  Show default courses & slots
+                </button>
+              )}
+            </div>
           </section>
 
           {showConfig && (
