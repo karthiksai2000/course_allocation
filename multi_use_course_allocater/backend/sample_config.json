@@ -1,6 +1,7 @@
 {
   "xWeight": 0.3,
   "sectionSkillLimit": 4,
+  "defaultSkillCapacity": 70,
   "sectionSlot": {
     "1": "Slot1",
     "2": "Slot1",
@@ -24,25 +25,5 @@
     "20": "Slot5",
     "21": "Slot5",
     "22": "Slot5"
-  },
-  "skillCapacity": {
-    "German": 70,
-    "French": 70,
-    "Cookery": 70,
-    "Video Editing": 70,
-    "Yoga": 70,
-    "Painting": 70,
-    "Literary - Public Speaking": 70,
-    "Carnatic Music": 70,
-    "Photography": 70,
-    "APSSDC Electronics Home": 70,
-    "APSSDC Electrical": 70,
-    "Block printing-kalamkari": 70,
-    "Handcrafts": 70,
-    "Self Defence by Taekwondo": 70,
-    "Computational Thinking (only for slot-2 and slot-3)": 70,
-    "Pottery": 70,
-    "Western Dance": 70,
-    "Kuchipudi (Classical Dance)": 70
   }
 }

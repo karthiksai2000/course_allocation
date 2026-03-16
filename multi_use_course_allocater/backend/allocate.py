@@ -23,7 +23,7 @@ def _preference_order(col_name: str) -> int:
 
 
 def normalize_config(config: dict[str, Any]) -> dict[str, Any]:
-    required = {"xWeight", "sectionSkillLimit", "sectionSlot", "skillCapacity"}
+    required = {"xWeight", "sectionSkillLimit", "sectionSlot"}
     missing = sorted(required - set(config.keys()))
     if missing:
         raise ValueError(f"Missing config keys: {', '.join(missing)}")
@@ -48,25 +48,34 @@ def normalize_config(config: dict[str, Any]) -> dict[str, Any]:
             raise ValueError(f"Section {normalized_section} has an empty slot value")
         section_slot[normalized_section] = normalized_slot
 
-    raw_skill_capacity = config["skillCapacity"]
-    if not isinstance(raw_skill_capacity, dict) or not raw_skill_capacity:
-        raise ValueError("skillCapacity must be a non-empty object")
+    raw_skill_capacity = config.get("skillCapacity")
+    skill_capacity: dict[str, int] | None = None
+    if raw_skill_capacity is not None:
+        if not isinstance(raw_skill_capacity, dict) or not raw_skill_capacity:
+            raise ValueError("skillCapacity must be a non-empty object when provided")
 
-    skill_capacity: dict[str, int] = {}
-    for skill, capacity in raw_skill_capacity.items():
-        normalized_skill = str(skill).strip()
-        normalized_capacity = int(capacity)
-        if not normalized_skill:
-            raise ValueError("skillCapacity contains an empty skill name")
-        if normalized_capacity <= 0:
-            raise ValueError(f"Capacity for skill '{normalized_skill}' must be greater than 0")
-        skill_capacity[normalized_skill] = normalized_capacity
+        skill_capacity = {}
+        for skill, capacity in raw_skill_capacity.items():
+            normalized_skill = str(skill).strip()
+            normalized_capacity = int(capacity)
+            if not normalized_skill:
+                raise ValueError("skillCapacity contains an empty skill name")
+            if normalized_capacity <= 0:
+                raise ValueError(f"Capacity for skill '{normalized_skill}' must be greater than 0")
+            skill_capacity[normalized_skill] = normalized_capacity
+
+    default_skill_capacity = config.get("defaultSkillCapacity")
+    if default_skill_capacity is not None:
+        default_skill_capacity = int(default_skill_capacity)
+        if default_skill_capacity <= 0:
+            raise ValueError("defaultSkillCapacity must be greater than 0 when provided")
 
     return {
         "xWeight": x_weight,
         "sectionSkillLimit": section_skill_limit,
         "sectionSlot": section_slot,
         "skillCapacity": skill_capacity,
+        "defaultSkillCapacity": default_skill_capacity,
     }
 
 
@@ -76,20 +85,57 @@ def run_allocation(df: pd.DataFrame, config: dict[str, Any]) -> dict[str, Any]:
     section_slot = cfg["sectionSlot"]
     skill_capacity = cfg["skillCapacity"]
     section_skill_limit = cfg["sectionSkillLimit"]
+    default_skill_capacity = cfg.get("defaultSkillCapacity")
 
     name_col = _first_matching_column(list(df.columns), "student")
     reg_col = _first_matching_column(list(df.columns), "reg")
     cgpa_col = _first_matching_column(list(df.columns), "cgpa")
     section_col = _first_matching_column(list(df.columns), "section")
 
+    meta_keys = {"student", "name", "reg", "registration", "cgpa", "section", "attendance"}
+    pref_keywords = ("row", "pref", "preference", "choice", "option", "skill")
+
     pref_cols = sorted(
-        [c for c in df.columns if "row" in c.lower()],
+        [c for c in df.columns if any(k in c.lower() for k in pref_keywords)],
         key=_preference_order,
     )
-    if not pref_cols:
-        raise ValueError("No preference columns found (expected columns containing 'Row')")
 
-    skills = list(skill_capacity.keys())
+    # Heuristic fallback: treat non-meta object columns as preferences (helps sheets where headers are plain course names).
+    if not pref_cols:
+        for col in df.columns:
+            cl = col.lower()
+            if any(k in cl for k in meta_keys):
+                continue
+            if df[col].dtype == object:
+                pref_cols.append(col)
+        pref_cols = sorted(pref_cols, key=_preference_order)
+
+    if not pref_cols:
+        raise ValueError(
+            "No preference columns found. Add headers with 'Row'/'Preference' or ensure preference columns are non-numeric text."
+        )
+
+    def _derive_skills_from_preferences(frame: pd.DataFrame, pref_columns: list[str]) -> list[str]:
+        discovered: set[str] = set()
+        for col in pref_columns:
+            for value in frame[col].dropna().astype(str).str.strip():
+                if not value or value.lower() in {"nan", "none", "na", "n/a", "-"}:
+                    continue
+                discovered.add(value)
+        return sorted(discovered)
+
+    if skill_capacity:
+        skills = list(skill_capacity.keys())
+    else:
+        skills = _derive_skills_from_preferences(df, pref_cols)
+        if not skills:
+            raise ValueError("Could not auto-detect skills from preference columns.")
+
+        # Set a generous default capacity per skill to allow allocation unless bounded explicitly.
+        fallback_capacity = default_skill_capacity
+        if fallback_capacity is None:
+            fallback_capacity = section_skill_limit * max(1, len(section_slot))
+        skill_capacity = {skill: fallback_capacity for skill in skills}
 
     for col in df.columns:
         if df[col].dtype == object:

@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import Results from "./Results";
+
 const DEPT_APP_URL = import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_LIFESKILL_API || "http://localhost:8000";
 
 function distributeSections(sections, slotNames) {
   const totalSlots = slotNames.length;
@@ -113,58 +115,37 @@ function App() {
     setSelectedModule("lifeskill");
 
     try {
-      const arrayBuffer = await picked.arrayBuffer();
-      const workbook = XLSX.read(arrayBuffer);
-      const sheet = workbook.Sheets[workbook.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, { defval: "" });
-      if (!rows.length) return;
+      const formData = new FormData();
+      formData.append("file", picked);
 
-      const keys = Object.keys(rows[0]).map((k) => String(k));
-      const preferenceKeys = keys.filter((k) => k.toLowerCase().includes("row"));
-      const sectionKey = keys.find((k) => k.toLowerCase().includes("section"));
+      const response = await fetch(`${API_BASE}/inspect-excel`, {
+        method: "POST",
+        body: formData,
+      });
 
-      if (preferenceKeys.length) {
-        const found = new Set();
-        rows.forEach((row) => {
-          preferenceKeys.forEach((k) => {
-            const val = String(row[k] ?? "").trim();
-            if (val) found.add(val);
-          });
-        });
-        if (found.size) {
-          setSkillCapacities((prev) => {
-            const prevMap = new Map(prev);
-            return Array.from(found).map((skill) => [skill, prevMap.get(skill) ?? 70]);
-          });
-        }
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.detail || "Failed to inspect Excel");
       }
 
-      if (sectionKey) {
-        const sections = Array.from(
-          new Set(
-            rows
-              .map((row) => String(row[sectionKey] ?? "").trim())
-              .filter((val) => val.length)
-          )
-        );
+      const detectedSkills = data.skills || [];
+      if (detectedSkills.length) {
+        setSkillCapacities((prev) => {
+          const prevMap = new Map(prev);
+          return detectedSkills.map((skill) => [skill, prevMap.get(skill) ?? 70]);
+        });
+      }
 
-        if (sections.length) {
-          const sortedSections = [...sections].sort((a, b) => {
-            const aNum = Number(a);
-            const bNum = Number(b);
-            if (!Number.isNaN(aNum) && !Number.isNaN(bNum)) return aNum - bNum;
-            return String(a).localeCompare(String(b));
-          });
-
-          const totalSlots = Math.max(1, Number(slotCount) || 1);
-          const slotNames = Array.from({ length: totalSlots }, (_, i) => `Slot${i + 1}`);
-
-          setSectionSlots(distributeSections(sortedSections, slotNames));
-          setFetchedSections(sortedSections);
-        }
+      const detectedSections = data.sections || [];
+      if (detectedSections.length) {
+        const totalSlots = Math.max(1, Number(slotCount) || 1);
+        const slotNames = Array.from({ length: totalSlots }, (_, i) => `Slot${i + 1}`);
+        setSectionSlots(distributeSections(detectedSections, slotNames));
+        setFetchedSections(detectedSections);
       }
     } catch (parseErr) {
-      console.error("Excel parse skipped", parseErr);
+      console.error("Inspect failed", parseErr);
+      setError(parseErr.message || "Could not inspect Excel file");
     }
   };
 
@@ -183,7 +164,7 @@ function App() {
       formData.append("file", file);
       formData.append("config", JSON.stringify(config));
 
-      const response = await fetch("http://localhost:8000/run-allocation", {
+      const response = await fetch(`${API_BASE}/run-allocation`, {
         method: "POST",
         body: formData,
       });
