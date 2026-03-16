@@ -30,13 +30,13 @@ The system ensures **fairness, scalability, and transparency** using **data-driv
 **Life Skill Allocation API**
 
 ```text
-https://lifeskill-api.onrender.com
+[https://lifeskill-api.onrender.com](https://course-allocation-1.onrender.com)
 ```
 
 **Department Elective Allocation API**
 
 ```text
-https://dept-allocator.onrender.com
+[https://dept-allocator.onrender.com](https://course-allocation-2-de-python-backedn.onrender.com)
 ```
 
 Hosted on **Render Cloud Infrastructure**.
