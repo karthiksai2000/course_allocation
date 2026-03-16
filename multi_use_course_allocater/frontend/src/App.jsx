@@ -1,7 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import Results from "./Results";
-const DEPT_APP_URL = import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:5000";
+
+const LIFESKILL_API_URL =
+  import.meta.env.VITE_LIFESKILL_API || "http://localhost:8000";
+
+const DEPT_APP_URL =
+  import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:5000";
+
+
 
 function distributeSections(sections, slotNames) {
   const totalSlots = slotNames.length;
