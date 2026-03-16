@@ -123,7 +123,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", picked);
 
-      const response = await fetch(`${API_BASE}/inspect-excel`, {
+      const response = await fetch(`${LIFESKILL_API_URL}/inspect-excel`, {
         method: "POST",
         body: formData,
       });
@@ -170,7 +170,7 @@ function App() {
     formData.append("file", file);
     formData.append("config", JSON.stringify(config));
 
-      const response = await fetch("http://localhost:8000/run-allocation", {
+      const response = await fetch(`${LIFESKILL_API_URL}/run-allocation`, {
         method: "POST",
         body: formData,
       });
