@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import * as XLSX from "xlsx";
 import Results from "./Results";
-
 const DEPT_APP_URL = import.meta.env.VITE_DEPT_ALLOC_URL || "http://localhost:5000";
-const API_BASE = import.meta.env.VITE_LIFESKILL_API || "http://localhost:8000";
 
 function distributeSections(sections, slotNames) {
   const totalSlots = slotNames.length;
@@ -150,39 +148,42 @@ function App() {
   };
 
   const runAllocation = async () => {
-    setError("");
-    setResult(null);
+  setError("");
+  setResult(null);
 
-    if (!file) {
-      setError("Please upload an Excel file before running allocation.");
-      return;
-    }
+  if (!file) {
+    setError("Please upload an Excel file before running allocation.");
+    return;
+  }
 
-    setLoading(true);
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("config", JSON.stringify(config));
+  setLoading(true);
 
-      const response = await fetch(`${API_BASE}/run-allocation`, {
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("config", JSON.stringify(config));
+
+      const response = await fetch("http://localhost:8000/run-allocation", {
         method: "POST",
         body: formData,
       });
 
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.detail || "Allocation request failed");
-      }
+    const data = await response.json();
 
-      setResult(data);
-      setActiveTab("summary");
-      setShowResultsPage(true);
-    } catch (err) {
-      setError(err.message || "Unexpected error while running allocation");
-    } finally {
-      setLoading(false);
+    if (!response.ok) {
+      throw new Error(data.detail || "Allocation request failed");
     }
-  };
+
+    setResult(data);
+    setActiveTab("summary");
+    setShowResultsPage(true);
+
+  } catch (err) {
+    setError(err.message || "Unexpected error while running allocation");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const filteredStudents = useMemo(() => {
     if (!result?.studentWise) return [];

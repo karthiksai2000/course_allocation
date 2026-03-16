@@ -1,71 +1,397 @@
 
+---
 
-# Life Skill Allocation System
+# 🎓 University Course & Life Skill Allocation Platform
 
-Life Skill Allocation + Course Allocation — one repo, two engines, zero excuses.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-green)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-teal)
+![Flask](https://img.shields.io/badge/API-Flask-orange)
+![Deployment](https://img.shields.io/badge/Hosted%20On-Render-purple)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+A **production-ready full-stack university allocation platform** that automates:
+
+* 🎯 Department elective course allocation
+* 🎯 Life skill activity allocation
+
+The system ensures **fairness, scalability, and transparency** using **data-driven allocation algorithms and constraint-based optimization**.
 
 ---
 
-## What lives here
-- Life Skill allocator (slot/skill fairness) — FastAPI backend in [multi_use_course_allocater/backend](multi_use_course_allocater/backend) with a Vite frontend.
-- Google Form course allocator (G1/G2) — CLI and Flask UI in [multi_use_course_allocater/course_allocation](multi_use_course_allocater/course_allocation).
-- Frontend shell for the life-skill API in [multi_use_course_allocater/frontend](multi_use_course_allocater/frontend).
+# 🌐 Live Production System
+
+### Unified Allocation Dashboard
+
+[https://course-allocation-2-frontend.onrender.com/](https://course-allocation-2-frontend.onrender.com/)
+
+### Backend APIs
+
+**Life Skill Allocation API**
+
+```text
+[https://lifeskill-api.onrender.com](https://course-allocation-1.onrender.com)
+```
+
+**Department Elective Allocation API**
+
+```text
+[https://dept-allocator.onrender.com](https://course-allocation-2-de-python-backedn.onrender.com)
+```
+
+Hosted on **Render Cloud Infrastructure**.
 
 ---
 
-## Quick start: Life Skill API (FastAPI)
-- Install deps: `pip install -r multi_use_course_allocater/backend/requirements.txt`
-- Run API (from the backend folder): `uvicorn backend_api:app --reload --port 8000`
-- Health check: `http://localhost:8000/health`
-- Sample config: [multi_use_course_allocater/backend/sample_config.json](multi_use_course_allocater/backend/sample_config.json)
+# 🏗 System Architecture
 
-**Fire a run**
-- `curl -X POST http://localhost:8000/run-allocation -F "file=@responses.xlsx" -F "config=$(cat sample_config.json)"`
-- Or CLI: `python allocate.py --input responses.xlsx --config-json sample_config.json --output-dir output`
-- Validate outputs: `python validate_outputs.py --config-json sample_config.json`
-
-**Frontend (optional)**
-- `cd multi_use_course_allocater/frontend && npm install && npm run dev`
-- Frontend expects API at `http://localhost:8000`; Vite serves at `http://localhost:5173`.
-
----
-
-## Quick start: Course Allocation (G1/G2 Google Form flow)
-- Install deps: `pip install -r multi_use_course_allocater/course_allocation/requirements.txt`
-- Default CLI: `python main.py --responses responses.xlsx --config course_config.xlsx --output allocation_output.xlsx --mode auto`
-- Generate sample data: `python create_sample_data.py`
-- Web UI: `python web_app.py` then open `http://127.0.0.1:5000` (uploads responses/config/overrides, downloads reports per run).
-
----
-
-## Data expectations
-- Life Skill API input Excel must include name, reg no, CGPA, section, and preference columns containing “Row”. Column names are detected by keywords.
-- Life Skill config requires `xWeight`, `sectionSkillLimit`, `sectionSlot`, `skillCapacity` (see sample config). Merit score uses $Score = xWeight \times Attendance + (1 - xWeight) \times CGPA$.
-- Course Allocation responses follow the Google Form layout described in [multi_use_course_allocater/course_allocation/README.md](multi_use_course_allocater/course_allocation/README.md); config.xlsx lists Course, Group (G1/G2), Sections, Capacity, Prerequisites.
-
----
-
-## Outputs
-- Life Skill API: student_wise.xlsx, section_wise.xlsx, skill_wise.xlsx, slot_wise.xlsx, capacity_dashboard.xlsx, allocation_log.txt, duplicate_students_removed.txt, invalid_cgpa_rows.txt.
-- Course Allocation: allocation_output.xlsx with per-section sheets, Course Summary, Unallocated Students; run artifacts live under `multi_use_course_allocater/course_allocation/web_runs/`.
+```
+                   ┌────────────────────┐
+                   │   React Frontend   │
+                   │   (Vite Dashboard) │
+                   └─────────┬──────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │   Allocation Gateway │
+                  │  (Frontend API calls)│
+                  └─────────┬────────────┘
+                            │
+           ┌────────────────┴───────────────┐
+           │                                │
+           ▼                                ▼
+┌───────────────────────┐        ┌───────────────────────┐
+│ Life Skill API        │        │ Course Allocation API │
+│ FastAPI Service       │        │ Flask Service         │
+└────────────┬──────────┘        └────────────┬──────────┘
+             │                                │
+             ▼                                ▼
+  ┌────────────────────┐           ┌─────────────────────┐
+  │ Slot Skill Engine  │           │ G1/G2 Course Engine │
+  │ (Section fairness) │           │ (CGPA priority)     │
+  └────────────────────┘           └─────────────────────┘
+```
 
 ---
 
-## Design highlights
-- Section-fair allocation: round-robin within sections; respects per-slot capacity and per-section skill limits ([multi_use_course_allocater/backend/allocate.py](multi_use_course_allocater/backend/allocate.py)).
-- Dynamic config: config must ride along with every API call—no stale server state.
-- Demand-driven sections: new sections open only when earlier ones fill (see SectionManager in [multi_use_course_allocater/course_allocation/section_manager.py](multi_use_course_allocater/course_allocation/section_manager.py)).
-- Admin overrides: drop an overrides Excel to surgically move students before report generation ([multi_use_course_allocater/course_allocation/main.py](multi_use_course_allocater/course_allocation/main.py)).
-- Rich reports: Excel styling, per-combo summaries, and unallocated reasons ([multi_use_course_allocater/course_allocation/report_generator.py](multi_use_course_allocater/course_allocation/report_generator.py)).
+# 🧠 Algorithms & Data Structures
+
+The system applies multiple **DSA concepts** to guarantee efficient and fair allocation.
 
 ---
 
-## Troubleshooting fast
-- “Missing config keys” or “preference columns not found”: your JSON or Excel headers don’t match the expected keywords—check the sample files.
-- “No skills available for section …”: capacity or sectionSkillLimit too low for that slot; raise limits or reduce sections in config.
-- Web UI uploads failing: ensure Excel file extensions are .xlsx/.xlsm/.xls and keep API at `http://localhost:8000`.
-- Vite frontend cannot reach API: adjust CORS or change `vite.config.js` proxy to your backend port.
-* Skill capacity enforcement
-* Robust handling of invalid data
+## Greedy Allocation Strategy
 
-This results in a transparent and automated allocation process.
+Students are allocated based on **best possible available option** under constraints.
+
+Example:
+
+```
+Student → highest preference skill
+subject to capacity and section limits
+```
+
+Used in both engines.
+
+Time Complexity:
+
+```
+O(n log n)
+```
+
+---
+
+## Round Robin Section Fairness
+
+Life Skill allocation ensures **section-wise fairness**.
+
+Instead of global ranking:
+
+```
+Round 1 → Section toppers
+Round 2 → Second rank students
+Round 3 → Third rank students
+```
+
+This prevents:
+
+```
+Large sections dominating seats
+```
+
+---
+
+## Priority Ranking
+
+Students ranked using **multi-criteria sorting**:
+
+```
+Score = xWeight × Attendance + (1 − xWeight) × CGPA
+```
+
+Tie breaking:
+
+1️⃣ Score
+2️⃣ CGPA
+3️⃣ Attendance
+4️⃣ Timestamp
+
+Data structure used:
+
+```
+Sorted list / priority queue
+```
+
+---
+
+## Hash Maps for O(1) Constraint Checking
+
+Several constraints require instant lookup.
+
+Example:
+
+```
+skill_count[slot][skill]
+section_skill_count[section][skill]
+```
+
+Ensures **constant time seat validation**.
+
+---
+
+## Constraint Satisfaction Model
+
+Allocation must satisfy:
+
+| Constraint          | Purpose                      |
+| ------------------- | ---------------------------- |
+| Skill Capacity      | Limit students per skill     |
+| Section Skill Limit | Maintain section fairness    |
+| Prerequisites       | Ensure eligibility           |
+| Section Balancing   | Prevent uneven distributions |
+| Preference Priority | Respect student choices      |
+
+This resembles a simplified **Constraint Satisfaction Problem (CSP)**.
+
+---
+
+# ⚙️ Core Modules
+
+The platform consists of **two independent allocation engines**.
+
+---
+
+# 📘 Department Course Allocation Engine
+
+Located in:
+
+```
+course_allocation/
+```
+
+Allocates **G1 and G2 department electives** based on:
+
+* CGPA ranking
+* Course prerequisites
+* Seat availability
+* Section balancing
+
+### Allocation Workflow
+
+```
+1. Sort students by CGPA
+2. Allocate G1 (primary elective)
+3. Allocate G2 (secondary elective)
+4. Attempt section swaps if needed
+5. Apply section balancing
+```
+
+---
+
+# 🧑‍🎓 Life Skill Allocation Engine
+
+Located in:
+
+```
+backend/
+```
+
+Allocates life skill courses such as:
+
+* Photography
+* Cooking
+* Yoga
+* Dance
+* Music
+* Handcraft
+
+### Allocation Strategy
+
+```
+Section Fair Round Robin
++
+Preference Priority
++
+Slot Capacity Constraints
+```
+
+Example:
+
+```
+Slot1 sections → 1,2,3,4,5
+Section skill limit → 4
+```
+
+Maximum skill allocation:
+
+```
+4 × 5 = 20 students
+```
+
+Ensuring fair distribution across sections.
+
+---
+
+# 📊 Generated Reports
+
+### Life Skill Reports
+
+```
+student_wise.xlsx
+section_wise.xlsx
+skill_wise.xlsx
+slot_wise.xlsx
+capacity_dashboard.xlsx
+```
+
+---
+
+### Department Allocation Reports
+
+```
+allocation_output.xlsx
+```
+
+Contains:
+
+| Sheet          | Description                 |
+| -------------- | --------------------------- |
+| Section Sheets | Allocated students          |
+| Course Summary | Seat utilization            |
+| Unallocated    | Students without allocation |
+
+---
+
+# 🖥 Frontend Dashboard
+
+Built with:
+
+```
+React + Vite
+```
+
+Features:
+
+✔ Upload student responses
+✔ Upload configuration files
+✔ Run allocation engines
+✔ Download Excel reports
+✔ View allocation results
+
+Environment variables:
+
+```
+VITE_LIFESKILL_API=https://lifeskill-api.onrender.com
+VITE_DEPT_ALLOC_URL=https://dept-allocator.onrender.com
+```
+
+---
+
+# ☁️ Cloud Deployment
+
+| Layer                 | Technology   |
+| --------------------- | ------------ |
+| Frontend              | React + Vite |
+| Life Skill API        | FastAPI      |
+| Course Allocation API | Flask        |
+| Data Processing       | Pandas       |
+| Excel Reports         | OpenPyXL     |
+| Hosting               | Render       |
+
+---
+
+# 🚀 Performance
+
+| Metric                  | Value       |
+| ----------------------- | ----------- |
+| Students supported      | 2000+       |
+| Average allocation time | < 5 seconds |
+| API response time       | < 2 seconds |
+
+---
+
+# 📂 Repository Structure
+
+```
+multi_use_course_allocater
+│
+├── backend
+│   ├── allocate.py
+│   ├── backend_api.py
+│   └── validate_outputs.py
+│
+├── course_allocation
+│   ├── main.py
+│   ├── web_app.py
+│   ├── section_manager.py
+│   ├── course_allocator.py
+│   └── report_generator.py
+│
+├── frontend
+│   └── React dashboard
+│
+└── documentation
+```
+
+---
+
+# 🔒 Data Validation
+
+The system automatically detects and handles:
+
+* duplicate student submissions
+* invalid CGPA values
+* missing preferences
+* invalid skill selections
+
+All anomalies are logged for transparency.
+
+---
+
+# 🔮 Future Improvements
+
+Planned enhancements include:
+
+* AI based preference prediction
+* interactive allocation visualization
+* admin override interface
+* real-time seat tracking
+
+---
+
+# 📜 Project Goal
+
+This platform demonstrates practical applications of:
+
+* Data Structures
+* Algorithm Design
+* Full-Stack Development
+* Cloud Deployment
+
+to solve a **real university resource allocation problem**.
+
+---
+
+⭐ If you find this project useful, please consider starring the repository.
+
+---

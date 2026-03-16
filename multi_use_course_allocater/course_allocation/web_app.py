@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from flask_cors import CORS
 import json
 import re
 from datetime import datetime
@@ -22,7 +22,7 @@ ALLOWED_EXTENSIONS = {".xlsx", ".xlsm", ".xls"}
 app = Flask(__name__)
 app.secret_key = "course-allocation-web-ui"
 
-
+CORS(app)
 def _allowed_file(filename: str) -> bool:
     return Path(filename).suffix.lower() in ALLOWED_EXTENSIONS
 
@@ -464,6 +464,8 @@ def download_artifact(run_id: str, artifact: str):
 
     return send_file(path, as_attachment=True)
 
+import os
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
